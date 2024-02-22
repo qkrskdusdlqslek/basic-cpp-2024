@@ -24,7 +24,6 @@ int main()
 {
 	char op;
 	int val1, val2
-	int result = 0;
 
 	std::cout << "두개 숫자 입력: ";
 	std::cin >> val1 >> val2;
