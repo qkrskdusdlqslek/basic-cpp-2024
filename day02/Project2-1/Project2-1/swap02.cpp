@@ -30,3 +30,8 @@ int main(void)
 	return 0;
 }
 */
+
+// int num = 10;        -> 일반적인 변수 선언
+// int* ptr = &num1;    -> ptr 부분이 num1 포인터고
+// int& num2 = num1;    -> 이미 위에서 num2 -> num1의 참조로 선언
+

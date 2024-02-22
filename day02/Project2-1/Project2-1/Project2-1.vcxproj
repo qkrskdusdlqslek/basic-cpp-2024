@@ -127,8 +127,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="RefArrElem.cpp" />
+    <ClCompile Include="RefReturnOne.cpp" />
+    <ClCompile Include="RefReturnTwo.cpp" />
     <ClCompile Include="swap01.cpp" />
     <ClCompile Include="swap02.cpp" />
+    <ClCompile Include="swap03.cpp" />
+    <ClCompile Include="Valuable.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
