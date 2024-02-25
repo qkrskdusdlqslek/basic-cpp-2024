@@ -129,9 +129,11 @@
   <ItemGroup>
     <ClCompile Include="Car.cpp" />
     <ClCompile Include="Car.h.cpp" />
+    <ClCompile Include="Clang18_hong1.cpp" />
     <ClCompile Include="ConstTest.cpp" />
-    <ClCompile Include="Filediv.cpp" />
+    <ClCompile Include="Filediv1.cpp" />
     <ClCompile Include="Filediv01.cpp" />
+    <ClCompile Include="Clang18_hong.cpp" />
     <ClCompile Include="MemMalFree.cpp">
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
@@ -148,6 +150,7 @@
     <ClCompile Include="struct03.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Clang18_hong.h" />
     <ClInclude Include="Filediv.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

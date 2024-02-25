@@ -1,4 +1,4 @@
-#include <iostream>
+/*#include <iostream>
 #include"Filediv.h"
 
 AClass::AClass(int anum) {
@@ -19,4 +19,4 @@ int main(void)
 
 	return 0;
 }
-
+*/

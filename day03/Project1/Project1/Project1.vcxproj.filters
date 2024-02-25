@@ -57,12 +57,21 @@
     <ClCompile Include="Filediv01.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="Filediv.cpp">
+    <ClCompile Include="Filediv1.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Clang18_hong.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Clang18_hong1.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Filediv.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Clang18_hong.h">
       <Filter>소스 파일</Filter>
     </ClInclude>
   </ItemGroup>
