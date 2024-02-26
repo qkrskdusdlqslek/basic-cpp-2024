@@ -1,4 +1,4 @@
-#pragma once
+/*#pragma once
 #ifndef HONG_CLASS_H
 #define HONG_CLASS_H
 
@@ -16,7 +16,7 @@ private:
 
 #endif
 
-/*
+
 1. #pragma once:
 -> 이는 헤더 파일이 한 번만 포함되도록 하는 전처리 지시문.
 -> #ifndef, #define, #endif를 사용하는 대신에 #pragma once만으로도 중복 포함을 방지

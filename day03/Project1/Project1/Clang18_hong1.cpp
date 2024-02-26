@@ -1,4 +1,4 @@
-#include "Clang18_hong.h"
+/*#include "Clang18_hong.h"
 
 int main() {
     Hong hong("홍길동", 50);
@@ -7,7 +7,7 @@ int main() {
     return 0;
 }
 
-/*
+
 1. "clang18_hong.h" 헤더 파일은 Hong 클래스의 선언과 관련된 내용을 포함.
 -> 이 헤더 파일은 홍길동에 대한 정보를 다루는 클래스인 Hong을 정의.
 

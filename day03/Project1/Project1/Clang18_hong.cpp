@@ -1,4 +1,4 @@
-#include "Clang18_hong.h"
+/*#include "Clang18_hong.h"
 #include <iostream>
 
 Hong::Hong(const std::string& name, int age) : name(name), age(age) {}
@@ -8,7 +8,7 @@ void Hong::ShowInfo() {
 }
 
 
-/*
+
 1. #include "clang18_hong.h":
 -> 이는 이전에 작성한 헤더 파일인 "clang18_hong.h"를 포함.
 -> 이 헤더 파일에는 Hong 클래스의 선언.
