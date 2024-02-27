@@ -41,7 +41,7 @@ public:
 
 int main(void)
 {
-	Person* parr[3];
+	Person* parr[3];               // 객체 포인터배열
 	char namestr[100];
 	int age;
 
@@ -51,17 +51,17 @@ int main(void)
 		cin >> namestr;
 		cout << "나이: ";
 		cin >> age;
-		parr[i] = new Person(namestr, age);
+		parr[i] = new Person(namestr, age);       // heap 영역에 객체를 생성한다.
 	}
 
-	parr[0]->SetPersonInfo();
+	parr[0]->SetPersonInfo();        // 객체포인터를 가지고 멤버에 접근한다.(-> : arrow연산자)
 	parr[1]->SetPersonInfo();
 	parr[2]->SetPersonInfo();
+
 	delete parr[0];
 	delete parr[1];
 	delete parr[2];
 	
 	return 0;
-
 }
 */

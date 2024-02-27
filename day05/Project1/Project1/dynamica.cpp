@@ -23,7 +23,7 @@ int main()
 		pary[i] = i + 10;         // 배열의 각 방에 원소(요소)값을 집어 넣는다. Ex) pary[0] = 10
 	}
 
-	for (int i = 0; i < 10; i++) {
+	for (int i = 0; i < 10; i++) { 
 		printf("pary[%d] : %d\n", i, pary[i]);
 	}
 
