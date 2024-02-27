@@ -15,10 +15,10 @@ public:
 		age = hage;
 	}
 	void ShowInfo() const {
-		cout << "생년월일 -> " << ID << endl;        // 학번 출력
-		cout << "이름 -> " << name << endl;      // 이름 출력
-		cout << "직업 -> " << job << "과" << endl;     // 전공 출력
-		cout << "나이 -> " << age << "살" << endl;       // 나이 출력
+		cout << "생년월일 -> " << ID: << endl;        // 학번 출력
+		cout << "이름 -> " << name: << endl;      // 이름 출력
+		cout << "직업 -> " << job: << endl;     // 전공 출력
+		cout << "나이 -> " << age: << endl;       // 나이 출력
 	}
 };
 
