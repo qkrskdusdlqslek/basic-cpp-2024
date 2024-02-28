@@ -13,15 +13,15 @@ public:
 		num += n;
 		return *this;
 	}
-	void ShowData() const            // »ó¼ö ÇÔ¼ö, const¸¦ »ç¿ëÇØ¼­ °ªÀÌ º¯°æµÉ ¼ö ¾øÀ½
+	void ShowData() const            // ìƒìˆ˜ í•¨ìˆ˜, constë¥¼ ì‚¬ìš©í•´ì„œ ê°’ì´ ë³€ê²½ë  ìˆ˜ ì—†ìŒ
 	{
-		cout << "num: " << num << endl;   // °ªÀÌ º¯°æµÉ ¼ö ÀÖ´Â ¼ÒÁö°¡ ¾øÀ½
+		cout << "num: " << num << endl;   // ê°’ì´ ë³€ê²½ë  ìˆ˜ ìˆëŠ” ì†Œì§€ê°€ ì—†ìŒ
 	}
 };
 
 int main(void)
 {
-	const SoSimple obj(7);         // const¸¦ ÅëÇØ °´Ã¼¸¦ »ó¼öÈ­ ½ÃÅ´
+	const SoSimple obj(7);         // constë¥¼ í†µí•´ ê°ì²´ë¥¼ ìƒìˆ˜í™” ì‹œí‚´
 	// obj.AddNum(20);
 	obj.ShowData();
 

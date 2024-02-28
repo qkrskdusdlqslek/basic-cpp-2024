@@ -8,20 +8,20 @@ private:
 public:
 	SoSimple(int n) : num(n)
 	{
-		cout << "SoSimple(int n) constructor È£Ãâ" << endl;
+		cout << "SoSimple(int n) constructor í˜¸ì¶œ" << endl;
 	}
-	SoSimple(const SoSimple& copy) : num(copy.num)                    // SoSimpleÀ» ÂüÁ¶ÇÏ°í ÀÖ´Â copy = obj
+	SoSimple(const SoSimple& copy) : num(copy.num)                    // SoSimpleì„ ì°¸ì¡°í•˜ê³  ìžˆëŠ” copy = obj
 	{
-		cout << "called SoSimple(const SoSimple& copy)" << endl;     // º¹»ç»ý¼ºÀÚ È£Ãâ
+		cout << "called SoSimple(const SoSimple& copy)" << endl;     // ë³µì‚¬ìƒì„±ìž í˜¸ì¶œ
 	}
 
-	void ShowData()                            // ¸â¹öÇÔ¼ö : °´Ã¼ »ý¼º ÈÄ¿¡ »ç¿ë °¡´É
+	void ShowData()                            // ë©¤ë²„í•¨ìˆ˜ : ê°ì²´ ìƒì„± í›„ì— ì‚¬ìš© ê°€ëŠ¥
 	{
 		cout << "num: " << num << endl;
 	}
 };
 
-void SimpleFuncObj(SoSimple ob)              // Àü¿ªÇÔ¼ö : ¼Ò¼Ó ¾øÀ½, ¾Æ¹«³ª Á¢±Ù °¡´É(°´Ã¼ »ý¼º ÇÊ¿ä ¾øÀ½)
+void SimpleFuncObj(SoSimple ob)              // ì „ì—­í•¨ìˆ˜ : ì†Œì† ì—†ìŒ, ì•„ë¬´ë‚˜ ì ‘ê·¼ ê°€ëŠ¥(ê°ì²´ ìƒì„± í•„ìš” ì—†ìŒ)
 {
 	ob.ShowData();
 }
@@ -29,9 +29,9 @@ void SimpleFuncObj(SoSimple ob)              // Àü¿ªÇÔ¼ö : ¼Ò¼Ó ¾øÀ½, ¾Æ¹«³ª Á¢±
 int main(void)
 {
 	SoSimple obj(7);
-	cout << "ÇÔ¼öÈ£Ãâ Àü" << endl;
-	SimpleFuncObj(obj);                    // obj´Â ÀÎ¼ö
-	cout << "ÇÔ¼öÈ£Ãâ ÈÄ" << endl;
+	cout << "í•¨ìˆ˜í˜¸ì¶œ ì „" << endl;
+	SimpleFuncObj(obj);                    // objëŠ” ì¸ìˆ˜
+	cout << "í•¨ìˆ˜í˜¸ì¶œ í›„" << endl;
 
 	return 0;
 }

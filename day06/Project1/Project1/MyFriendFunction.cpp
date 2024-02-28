@@ -1,7 +1,7 @@
 /*#include <iostream>
 using namespace std;
 
-class Point;          // Point°¡ Å¬·¡½ºÀÇ ÀÌ¸§ÀÓÀ» ¼±¾ğ
+class Point;          // Pointê°€ í´ë˜ìŠ¤ì˜ ì´ë¦„ì„ì„ ì„ ì–¸
 
 class PointOP
 {
@@ -11,8 +11,8 @@ public:
 	PointOP() : opcnt(0)
 	{ }
 
-	Point PointAdd(const Point&, const Point&);      // ÇÔ¼ö ¼±¾ğºÎ¿¡¼­´Â ¸Å°³º¯¼öÀÇ ÀÌ¸§Àº »ı·« °¡´ÉÇÏ³ª (Ex. Point &fri -> Point&)
-	Point PointSub(const Point&, const Point&);      // ¸Å°³º¯¼ö Å¸ÀÔÀº »ı·« ÇÒ ¼ö ¾ø´Ù.
+	Point PointAdd(const Point&, const Point&);      // í•¨ìˆ˜ ì„ ì–¸ë¶€ì—ì„œëŠ” ë§¤ê°œë³€ìˆ˜ì˜ ì´ë¦„ì€ ìƒëµ ê°€ëŠ¥í•˜ë‚˜ (Ex. Point &fri -> Point&)
+	Point PointSub(const Point&, const Point&);      // ë§¤ê°œë³€ìˆ˜ íƒ€ì…ì€ ìƒëµ í•  ìˆ˜ ì—†ë‹¤.
 	~PointOP()
 	{
 		cout << "Operation times: " << opcnt << endl;
@@ -32,10 +32,10 @@ public:
 	friend void ShowPointPos(const Point&);
 };
 
-Point PointOP::PointAdd(const Point& pnt1, const Point& pnt2)    //PointAddÀÇ Á¤ÀÇ(Á¤ÀÇ¿¡¼­´Â ¸â¹öº¯¼ö ÀÌ¸§Àº »ı·«X)
+Point PointOP::PointAdd(const Point& pnt1, const Point& pnt2)    //PointAddì˜ ì •ì˜(ì •ì˜ì—ì„œëŠ” ë©¤ë²„ë³€ìˆ˜ ì´ë¦„ì€ ìƒëµX)
 {
 	opcnt++;
-	return Point(pnt1.x + pnt2.x, pnt1.y + pnt2.y);          // ÂüÁ¶ÇÏ°í ÀÖ´Â Point °´Ã¼ÀÇ x ÄÚµå¸¦ ´õÇØ¶ó
+	return Point(pnt1.x + pnt2.x, pnt1.y + pnt2.y);          // ì°¸ì¡°í•˜ê³  ìˆëŠ” Point ê°ì²´ì˜ x ì½”ë“œë¥¼ ë”í•´ë¼
 }
 
 Point PointOP::PointSub(const Point& pnt1, const Point& pnt2)

@@ -3,17 +3,17 @@
 #include <cstring>
 using namespace std;
 
-class Girl;        // GirlÀÌ¶ó´Â ÀÌ¸§ÀÌ Å¬·¡½ºÀÇ ÀÌ¸§ÀÓÀ» ¾Ë¸²(»ı·« ÇØµµ µÊ) (¹Ì¸® ¾Ë·ÁÁÖ´Â ¿ëµµ, ÄÚµå º¼ ¶§ °¡µ¶¼ºÀ» ³ô¿© ÁÜ)
+class Girl;        // Girlì´ë¼ëŠ” ì´ë¦„ì´ í´ë˜ìŠ¤ì˜ ì´ë¦„ì„ì„ ì•Œë¦¼(ìƒëµ í•´ë„ ë¨) (ë¯¸ë¦¬ ì•Œë ¤ì£¼ëŠ” ìš©ë„, ì½”ë“œ ë³¼ ë•Œ ê°€ë…ì„±ì„ ë†’ì—¬ ì¤Œ)
 
 class Boy
 {
 private:
 	int height;
-	friend class Girl;                            // Girl Å¬·¡½º¿¡ ´ëÇÑ friend ¼±¾ğ
+	friend class Girl;                            // Girl í´ë˜ìŠ¤ì— ëŒ€í•œ friend ì„ ì–¸
 public:
 	Boy(int len) : height(len)
 	{ }
-	void ShowYourFriendInfo(Girl& frn);           // ¼±¾ğºÎ (¼±¾ğºÎ¿Í Á¤ÀÇºÎ¸¦ ºĞ¸®)
+	void ShowYourFriendInfo(Girl& frn);           // ì„ ì–¸ë¶€ (ì„ ì–¸ë¶€ì™€ ì •ì˜ë¶€ë¥¼ ë¶„ë¦¬)
 };
 
 class Girl
@@ -25,16 +25,16 @@ public:
 	{
 		strcpy(phNum, num);
 	}
-	void ShowYourFriendInfo(Boy& frn);            // ¸â¹öÇÔ¼öÀÇ Á¤ÀÇ¸¦ ¹ÛÀ¸·Î »©ÁÜ
-	friend class Boy;                             // Boy Å¬·¡½º¿¡ ´ëÇÑ friend ¼±¾ğ
+	void ShowYourFriendInfo(Boy& frn);            // ë©¤ë²„í•¨ìˆ˜ì˜ ì •ì˜ë¥¼ ë°–ìœ¼ë¡œ ë¹¼ì¤Œ
+	friend class Boy;                             // Boy í´ë˜ìŠ¤ì— ëŒ€í•œ friend ì„ ì–¸
 }; 
 
-void Boy::ShowYourFriendInfo(Girl& frn)          // Á¤ÀÇºÎ : ¸â¹öÇÔ¼öÀÇ ¼Ò¼ÓÀ» Á¤ÀÇÇØ¾ß ÇÑ´Ù(¼±¾ğºÎ¿Í Á¤ÀÇºÎ¸¦ ºĞ¸®ÇßÀ» ¶§..)
+void Boy::ShowYourFriendInfo(Girl& frn)          // ì •ì˜ë¶€ : ë©¤ë²„í•¨ìˆ˜ì˜ ì†Œì†ì„ ì •ì˜í•´ì•¼ í•œë‹¤(ì„ ì–¸ë¶€ì™€ ì •ì˜ë¶€ë¥¼ ë¶„ë¦¬í–ˆì„ ë•Œ..)
 {
 	cout << "Her phone number: " << frn.phNum << endl;
 }
 
-void Girl::ShowYourFriendInfo(Boy& frn)         // Girl class ¾È¿¡ ÀÖ´Â ÇÊµå·Î Á¢±ÙÇØ¼­ »ç¿ë °¡´ÉÇÏ°Ô ¸¸µé¾î ÁÜ(¼Ò¼Ó Á¤ÀÇ)
+void Girl::ShowYourFriendInfo(Boy& frn)         // Girl class ì•ˆì— ìˆëŠ” í•„ë“œë¡œ ì ‘ê·¼í•´ì„œ ì‚¬ìš© ê°€ëŠ¥í•˜ê²Œ ë§Œë“¤ì–´ ì¤Œ(ì†Œì† ì •ì˜)
 {
 	cout << "His height: " << frn.height << endl;
 }

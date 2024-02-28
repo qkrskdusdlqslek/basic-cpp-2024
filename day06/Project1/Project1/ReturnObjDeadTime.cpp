@@ -1,42 +1,42 @@
 /*#include <iostream>
 using namespace std;
 
-class SoSimple                     //SoSimple Å¬·¡½º ¸â¹ö º¯¼ö ÇÏ³ª °¡Áö°í ÀÖÀ½
+class SoSimple                     //SoSimple í´ë˜ìŠ¤ ë©¤ë²„ ë³€ìˆ˜ í•˜ë‚˜ ê°€ì§€ê³  ìˆìŒ
 {
 private: 
-	int num;                      // ¸â¹öº¯¼ö´Â 3°³- »ı¼ºÀÚ 1, ¼Ò¸êÀÚ 2
+	int num;                      // ë©¤ë²„ë³€ìˆ˜ëŠ” 3ê°œ- ìƒì„±ì 1, ì†Œë©¸ì 2
 public:
-	SoSimple(int n) : num(n)                           // ÀÔ·Â»ı¼ºÀÚ
+	SoSimple(int n) : num(n)                           // ì…ë ¥ìƒì„±ì
 	{
-		cout << "New Object: " << this << endl;        // this´Â °´Ã¼ ÀÚ±âÀÚ½ÅÀ» °¡¸®Å°´Â Æ÷ÀÎÅÍ --> °´Ã¼ objÁÖ¼Ò (31Çà ½ÇÇà)
+		cout << "New Object: " << this << endl;        // thisëŠ” ê°ì²´ ìê¸°ìì‹ ì„ ê°€ë¦¬í‚¤ëŠ” í¬ì¸í„° --> ê°ì²´ objì£¼ì†Œ (31í–‰ ì‹¤í–‰)
 	}
-	SoSimple(const SoSimple& copy) : num(copy.num)     //º¹»ç»ı¼ºÀÚ
+	SoSimple(const SoSimple& copy) : num(copy.num)     //ë³µì‚¬ìƒì„±ì
 	{
-		cout << "New Copy obj: " << this << endl;     // ÀÓ½Ã°´Ã¼ ÁÖ¼Ò
+		cout << "New Copy obj: " << this << endl;     // ì„ì‹œê°ì²´ ì£¼ì†Œ
 	}
-	~SoSimple()                                       // ¼Ò¸êÀÚ È£Ãâ
+	~SoSimple()                                       // ì†Œë©¸ì í˜¸ì¶œ
 	{ 
-		cout << "Destroy obj: " << this << endl;     // ÀÌ °´Ã¼°¡ ¼Ò¸êµÇ¾ú±¸³ª¸¦ ¾Ë ¼ö ÀÖÀ½ -->°´Ã¼ obÁÖ¼Ò(32Çà ½ÇÇà)
-		                                             // °´Ã¼ ob ¼Ò¸ê & ÀÓ½Ã°´Ã¼ ¼Ò¸ê
+		cout << "Destroy obj: " << this << endl;     // ì´ ê°ì²´ê°€ ì†Œë©¸ë˜ì—ˆêµ¬ë‚˜ë¥¼ ì•Œ ìˆ˜ ìˆìŒ -->ê°ì²´ obì£¼ì†Œ(32í–‰ ì‹¤í–‰)
+		                                             // ê°ì²´ ob ì†Œë©¸ & ì„ì‹œê°ì²´ ì†Œë©¸
 	}
 };
 
-SoSimple SimpleFuncObj(SoSimple ob)                  // Ãâ·Â_SimpleFuncObj ÇÔ¼ö_SoSimple ob ÀÔ·Â ¼øÀ¸·Î..
-                                                     // obj¸¦ º¹»çÇØ¼­ ob¸¦ ¸¸µé¾î³¿ 
+SoSimple SimpleFuncObj(SoSimple ob)                  // ì¶œë ¥_SimpleFuncObj í•¨ìˆ˜_SoSimple ob ì…ë ¥ ìˆœìœ¼ë¡œ..
+                                                     // objë¥¼ ë³µì‚¬í•´ì„œ obë¥¼ ë§Œë“¤ì–´ëƒ„ 
 {
-	cout << "Parm ADR: " << &ob << endl;             // &: ÁÖ¼Ò ¿¬»êÀÚ (ÂüÁ¶ ¿¬»êÀÚ´Â ¼±¾ğÇÒ ¶§ »ç¿ë, but ¿©±â´Â ¼±¾ğÇÏ´Â ºÎºĞX)
-	                                                 // °´Ã¼ ob ÁÖ¼Ò¸¦ ±¸ÇÏ´Â ÄÚµå
-	return ob;                                       // 23Çà¿¡ ÀÖ´Â ob 
+	cout << "Parm ADR: " << &ob << endl;             // &: ì£¼ì†Œ ì—°ì‚°ì (ì°¸ì¡° ì—°ì‚°ìëŠ” ì„ ì–¸í•  ë•Œ ì‚¬ìš©, but ì—¬ê¸°ëŠ” ì„ ì–¸í•˜ëŠ” ë¶€ë¶„X)
+	                                                 // ê°ì²´ ob ì£¼ì†Œë¥¼ êµ¬í•˜ëŠ” ì½”ë“œ
+	return ob;                                       // 23í–‰ì— ìˆëŠ” ob 
 }
 
 int main(void)
 {
-	SoSimple obj(7);         //SoSimple Å¸ÀÔÀÇ obj¶ó´Â °´Ã¼ »ı¼º, 7ÀÌ¶ó´Â ÀÔ·Â°ªÀ» È£Ãâ
+	SoSimple obj(7);         //SoSimple íƒ€ì…ì˜ objë¼ëŠ” ê°ì²´ ìƒì„±, 7ì´ë¼ëŠ” ì…ë ¥ê°’ì„ í˜¸ì¶œ
 	SimpleFuncObj(obj);      
 
 	cout << endl;
-	SoSimple tempRef = SimpleFuncObj(obj);     // ¿À¸¥ÂÊ¿¡ ÀÖ´Â °ÍÀ» ¿ŞÂÊ¿¡ Áı¾î³ÖÀ½ , ÀÓ½Ã°´Ã¼ ÁÖ¼Ò ÀúÀå
-	cout << "Return Obj " << &tempRef << endl;    // ÁÖ¼Ò ¿¬»êÀÚ(tempRefÀÇ ÁÖ¼Ò¸¦ ¾Ë¾Æº¸°í ÀÖÀ½), ÀÓ½Ã°´Ã¼ ÁÖ¼Ò ÀúÀå
+	SoSimple tempRef = SimpleFuncObj(obj);     // ì˜¤ë¥¸ìª½ì— ìˆëŠ” ê²ƒì„ ì™¼ìª½ì— ì§‘ì–´ë„£ìŒ , ì„ì‹œê°ì²´ ì£¼ì†Œ ì €ì¥
+	cout << "Return Obj " << &tempRef << endl;    // ì£¼ì†Œ ì—°ì‚°ì(tempRefì˜ ì£¼ì†Œë¥¼ ì•Œì•„ë³´ê³  ìˆìŒ), ì„ì‹œê°ì²´ ì£¼ì†Œ ì €ì¥
 
 	return 0;
 }

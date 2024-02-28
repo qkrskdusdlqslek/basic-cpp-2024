@@ -11,23 +11,23 @@ private:
 public:
 	Person(const char* myname, int myage)
 	{
-		cout << "»ı¼ºÀÚ È£Ãâ" << endl;
+		cout << "ìƒì„±ì í˜¸ì¶œ" << endl;
 		int len = strlen(myname) + 1;
 		name = new char[len];
 		strcpy(name, myname);
 		age = myage;
 	}
 
-	//---------------> ±íÀº º¹»ç»ı¼ºÀÚ
+	//---------------> ê¹Šì€ ë³µì‚¬ìƒì„±ì
 	Person(const Person& copy) : age(copy.age)
 	{
-		cout << "±íÀº º¹»ç»ı¼ºÀÚ È£Ãâ" << endl;
-		this->name = new char[strlen(copy.name) + 1];    // ¹®ÀÚ¿­À» ±âº» º¹»çÇÏ´Â ÇüÅÂ
+		cout << "ê¹Šì€ ë³µì‚¬ìƒì„±ì í˜¸ì¶œ" << endl;
+		this->name = new char[strlen(copy.name) + 1];    // ë¬¸ìì—´ì„ ê¸°ë³¸ ë³µì‚¬í•˜ëŠ” í˜•íƒœ
 		strcpy(name, copy.name);
-		this->age = copy.age;                           // ¸â¹ö ´ë ¸â¹ö º¹»ç
+		this->age = copy.age;                           // ë©¤ë²„ ëŒ€ ë©¤ë²„ ë³µì‚¬
 	}
 	*/
-	/*--------> µğÆúÆ® º¹»ç»ı¼ºÀÚ
+	/*--------> ë””í´íŠ¸ ë³µì‚¬ìƒì„±ì
 	Person(const Person & copy)
 	{  
 		this->name = copy.name;
@@ -37,8 +37,8 @@ public:
 
 	/*void ShowPersonInfo() const
 	{
-		cout << "ÀÌ¸§: " << name << endl;
-		cout << "³ªÀÌ: " << age << endl;
+		cout << "ì´ë¦„: " << name << endl;
+		cout << "ë‚˜ì´: " << age << endl;
 	}
 	~Person()
 	{
@@ -58,13 +58,13 @@ int main(void)
 */
 
 /*
-int func(int a) {    // a= 10;, numÀÇ 10À» º¹»çÇØ¼­ »ç¿ëÇÑ´Ù.
+int func(int a) {    // a= 10;, numì˜ 10ì„ ë³µì‚¬í•´ì„œ ì‚¬ìš©í•œë‹¤.
 	a = 10 + a;
-	return a;        // a¸¦ ¸®ÅÏÇÑ´Ù.  a= 20 , a¸¦ º¹»çÇÔ. 
+	return a;        // aë¥¼ ë¦¬í„´í•œë‹¤.  a= 20 , aë¥¼ ë³µì‚¬í•¨. 
 }
 
 int num = 10;        
-int res = func(num);    // res¶ó´Â º¯¼ö´Â 20À» °¡Áö°í ÀÖ´Ù. ±×·¸´Ù¸é aÀÇ 20°ú resÀÇ 20Àº ´Ù¸£´Ù. 
-                        // ¿Ö³ÄÇÏ¸é ¸®ÅÏ½ÃÄÑÁÖ´Â a¸¦ º¹»çÇØ¼­ res¸¦ »ç¿ëÇÏ´Â °ÍÀÌ´Ù. º¹»ç»ı¼ºÀÚ°¡ È£ÃâµÈ´Ù.
-                        // °ªÀ» Àü´ŞÇØÁÙ ¶§¸¸ »ç¿ë °¡´É -> Call by valueÀÏ ¶§¸¸ »ç¿ë!
+int res = func(num);    // resë¼ëŠ” ë³€ìˆ˜ëŠ” 20ì„ ê°€ì§€ê³  ìˆë‹¤. ê·¸ë ‡ë‹¤ë©´ aì˜ 20ê³¼ resì˜ 20ì€ ë‹¤ë¥´ë‹¤. 
+                        // ì™œëƒí•˜ë©´ ë¦¬í„´ì‹œì¼œì£¼ëŠ” aë¥¼ ë³µì‚¬í•´ì„œ resë¥¼ ì‚¬ìš©í•˜ëŠ” ê²ƒì´ë‹¤. ë³µì‚¬ìƒì„±ìê°€ í˜¸ì¶œëœë‹¤.
+                        // ê°’ì„ ì „ë‹¬í•´ì¤„ ë•Œë§Œ ì‚¬ìš© ê°€ëŠ¥ -> Call by valueì¼ ë•Œë§Œ ì‚¬ìš©!
 */

@@ -22,14 +22,14 @@ public:
 		
 int main(void)
 {
-	Temporary(100);           // Temporary´Â Å¬·¡½º --> ¿ø·¡´Â Temporary t(100);¶ó°í ÀÛ¼ºÇØ¾ß ÇÏ´Âµ¥ Áö±Ý °´Ã¼ ÀÌ¸§ÀÌ ¾øÀ½(t)
-	                          // --> ÀÌ¸§ ¾ø´Â ÀÓ½Ã°´Ã¼ (ÀÓ½Ã°´Ã¼´Â ÁÖ¼Ò°¡ ¾ø´Ù..)
+	Temporary(100);           // TemporaryëŠ” í´ëž˜ìŠ¤ --> ì›ëž˜ëŠ” Temporary t(100);ë¼ê³  ìž‘ì„±í•´ì•¼ í•˜ëŠ”ë° ì§€ê¸ˆ ê°ì²´ ì´ë¦„ì´ ì—†ìŒ(t)
+	                          // --> ì´ë¦„ ì—†ëŠ” ìž„ì‹œê°ì²´ (ìž„ì‹œê°ì²´ëŠ” ì£¼ì†Œê°€ ì—†ë‹¤..)
 	cout << "********** after make!" << endl << endl;
 
 	Temporary(200).ShowTemInfo();
 	cout << "********** after make!" << endl << endl;
 
-	const Temporary& ref = Temporary(300);         // ÀÓ½Ã°´Ã¼´Â ÂüÁ¶¸¦ ÇÒ ¼ö ¾ø´Ù. ÇÏÁö¸¸ const¶ó´Â Å°¿öµå¸¦ ºÙÀÌ¸é ÂüÁ¶ °¡´ÉÇØÁü
+	const Temporary& ref = Temporary(300);         // ìž„ì‹œê°ì²´ëŠ” ì°¸ì¡°ë¥¼ í•  ìˆ˜ ì—†ë‹¤. í•˜ì§€ë§Œ constë¼ëŠ” í‚¤ì›Œë“œë¥¼ ë¶™ì´ë©´ ì°¸ì¡° ê°€ëŠ¥í•´ì§
 	cout << "********** end of main!" << endl << endl;
 
 	return 0;

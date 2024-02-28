@@ -3,15 +3,15 @@ using namespace std;
 
 void Counter()
 {
-	static int cnt;              //------> 1ºÎÅÍ Áõ°¡ÇÔ
-	//int cnt = 0;              //-------> 1¸¸ °è¼Ó ³ª¿È
+	static int cnt;              //------> 1ë¶€í„° ì¦ê°€í•¨
+	//int cnt = 0;              //-------> 1ë§Œ ê³„ì† ë‚˜ì˜´
 	cnt++;
 	cout << "Current cnt: " << cnt << endl;
 }
 
 int main(void)
 {
-	for (int i = 0; i < 10; i++) {       // ¹İº¹Á¦¾î for¹® -> 10¹ø ½ÇÇà / Counter 10¹ø È£Ãâ Áß..
+	for (int i = 0; i < 10; i++) {       // ë°˜ë³µì œì–´ forë¬¸ -> 10ë²ˆ ì‹¤í–‰ / Counter 10ë²ˆ í˜¸ì¶œ ì¤‘..
 		Counter();
 	}
 	return 0;
