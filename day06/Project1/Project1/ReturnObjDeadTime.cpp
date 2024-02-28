@@ -1,4 +1,4 @@
-#include <iostream>
+/*#include <iostream>
 using namespace std;
 
 class SoSimple                     //SoSimple 클래스 멤버 변수 하나 가지고 있음
@@ -40,3 +40,4 @@ int main(void)
 
 	return 0;
 }
+*/

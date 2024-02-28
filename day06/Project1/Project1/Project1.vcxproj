@@ -128,7 +128,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CComStatic.cpp" />
+    <ClCompile Include="ConstObject.cpp" />
+    <ClCompile Include="ConstOverloading.cpp" />
     <ClCompile Include="IKnowTempObj.cpp" />
+    <ClCompile Include="MyFriendClass.cpp" />
+    <ClCompile Include="MyFriendFunction.cpp" />
     <ClCompile Include="PassObjCopycon.cpp" />
     <ClCompile Include="ReturnObjCopycon.cpp" />
     <ClCompile Include="ReturnObjDeadTime.cpp" />
