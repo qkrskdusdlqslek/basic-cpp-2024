@@ -3,11 +3,11 @@ using namespace std;
 
 int main()
 {
-	int num = 10;             // Áö¿ªº¯¼ö ¼±¾ð°ú ÃÊ±âÈ­
+	int num = 10;             // ì§€ì—­ë³€ìˆ˜ ì„ ì–¸ê³¼ ì´ˆê¸°í™”
 	cout << "num: " << num << endl;
 
-	int *pnum = &num;      //Æ÷ÀÎÅÍ º¯¼ö : ÁÖ¼Ò·Î num º¯¼ö¿¡ Á¢±Ù
- 	int &rnum = num;       // ÂüÁ¶º¯¼ö : ÂüÁ¶·Î num º¯¼ö¿¡ Á¢±Ù
+	int *pnum = &num;      //í¬ì¸í„° ë³€ìˆ˜ : ì£¼ì†Œë¡œ num ë³€ìˆ˜ì— ì ‘ê·¼
+ 	int &rnum = num;       // ì°¸ì¡°ë³€ìˆ˜ : ì°¸ì¡°ë¡œ num ë³€ìˆ˜ì— ì ‘ê·¼
 
 	num = 20;
 	cout << endl;

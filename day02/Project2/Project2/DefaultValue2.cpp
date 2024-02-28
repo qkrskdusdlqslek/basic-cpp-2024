@@ -1,15 +1,15 @@
 #include <iostream>
-int Adder(int num1 = 1, int num2 = 2);       // ÇÔ¼ö ¼±¾ğ
+int Adder(int num1 = 1, int num2 = 2);       // í•¨ìˆ˜ ì„ ì–¸
 
-int main(void)                               // ÇÔ¼ö È£ÃâÀ» ÇÏ·Á¸é ÇÔ¼ö ¼±¾ğÀ» ¸ÕÀú ÇØ¾ß ÇÔ
+int main(void)                               // í•¨ìˆ˜ í˜¸ì¶œì„ í•˜ë ¤ë©´ í•¨ìˆ˜ ì„ ì–¸ì„ ë¨¼ì € í•´ì•¼ í•¨
 {
-	std::cout << Adder() << std::endl;      // ÇÔ¼ö È£Ãâ:Adder() /  ÀÔ·Â°ª ¾øÀ½ -> ¸Å°³º¯¼ö¿¡ µğÆúÆ®°ª Àû¿ëµÊ 
+	std::cout << Adder() << std::endl;      // í•¨ìˆ˜ í˜¸ì¶œ:Adder() /  ì…ë ¥ê°’ ì—†ìŒ -> ë§¤ê°œë³€ìˆ˜ì— ë””í´íŠ¸ê°’ ì ìš©ë¨ 
 	std::cout << Adder(5) << std::endl;
 	std::cout << Adder(3, 5) << std::endl;
 	return 0;
 }
 
-int Adder(int num1, int num2)              // ÇÔ¼ö Á¤ÀÇ
+int Adder(int num1, int num2)              // í•¨ìˆ˜ ì •ì˜
 {
 	return num1 + num2;
 }

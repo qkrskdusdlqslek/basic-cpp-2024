@@ -1,27 +1,27 @@
 /*#include <iostream>
 using namespace std;
 
- //swap ÇÔ¼ö ±¸ÇöÇÏ±â
+ //swap í•¨ìˆ˜ êµ¬í˜„í•˜ê¸°
 
 
-void Swap(int *a, int *b)        // ÁÖ¼Ò¸¦ ¹ŞÀ» ¼ö ÀÖ´Â Æ÷ÀÎÅÍº¯¼ö¸¦ ¼±¾ğ
+void Swap(int *a, int *b)        // ì£¼ì†Œë¥¼ ë°›ì„ ìˆ˜ ìˆëŠ” í¬ì¸í„°ë³€ìˆ˜ë¥¼ ì„ ì–¸
 {
 	int temp;
-	temp = *a;                  // ÁÖ¼ÒÀÇ µ¥ÀÌÅÍ¸¦ ÂüÁ¶ 
+	temp = *a;                  // ì£¼ì†Œì˜ ë°ì´í„°ë¥¼ ì°¸ì¡° 
 	*a = *b;
 	*b = temp;
 }
 
 int main(void)
 {
-	int a = 10;           // Áö¿ªº¯¼ö
+	int a = 10;           // ì§€ì—­ë³€ìˆ˜
 	int b = 20;           
 
 	cout << "before: " << endl;
 	cout << "a: " << a << endl;
 	cout << "b: " << b << endl;
 
-	Swap(&a, &b);        // º¯¼öÀÇ ÁÖ¼Ò¸¦ Àü´Ş
+	Swap(&a, &b);        // ë³€ìˆ˜ì˜ ì£¼ì†Œë¥¼ ì „ë‹¬
 
 	cout << "after: " << endl;
 	cout << "a: " << a << endl;
@@ -31,7 +31,7 @@ int main(void)
 }
 */
 
-// int num = 10;        -> ÀÏ¹İÀûÀÎ º¯¼ö ¼±¾ğ
-// int* ptr = &num1;    -> ptr ºÎºĞÀÌ num1 Æ÷ÀÎÅÍ°í
-// int& num2 = num1;    -> ÀÌ¹Ì À§¿¡¼­ num2 -> num1ÀÇ ÂüÁ¶·Î ¼±¾ğ
+// int num = 10;        -> ì¼ë°˜ì ì¸ ë³€ìˆ˜ ì„ ì–¸
+// int* ptr = &num1;    -> ptr ë¶€ë¶„ì´ num1 í¬ì¸í„°ê³ 
+// int& num2 = num1;    -> ì´ë¯¸ ìœ„ì—ì„œ num2 -> num1ì˜ ì°¸ì¡°ë¡œ ì„ ì–¸
 

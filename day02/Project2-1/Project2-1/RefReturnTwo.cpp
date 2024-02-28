@@ -1,7 +1,7 @@
 /*#include <iostream>
 using namespace std;
 
-int& RefRetFuncOne(int& ref)     // RefReturnOne.cppÀÇ RefRetFuncOne°ú µ¿ÀÏ!
+int& RefRetFuncOne(int& ref)     // RefReturnOne.cppì˜ RefRetFuncOneê³¼ ë™ì¼!
 {
 	ref++;
 	return ref;
@@ -11,7 +11,7 @@ int& RefRetFuncOne(int& ref)     // RefReturnOne.cppÀÇ RefRetFuncOne°ú µ¿ÀÏ!
 int main()
 {
 	int num1 = 1;
-	int num2 = RefRetFuncOne(num1);     // num2´Â ¶Ç ´Ù¸¥ ÇüÅÂÀÇ º¯¼ö -> ±×·¡¼­ 2°¡ ÀúÀåµÇ¾î ÀÖÀ½
+	int num2 = RefRetFuncOne(num1);     // num2ëŠ” ë˜ ë‹¤ë¥¸ í˜•íƒœì˜ ë³€ìˆ˜ -> ê·¸ë˜ì„œ 2ê°€ ì €ì¥ë˜ì–´ ìˆìŒ
 
 	num1 += 1;       // 3
 	num2 += 100;     // 2 + 100 = 102
