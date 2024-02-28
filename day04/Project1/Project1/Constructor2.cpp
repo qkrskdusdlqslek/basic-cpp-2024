@@ -7,7 +7,7 @@ private:
 	int num1;
 	int num2;
 public: 
-	SimpleClass(int n1 = 0, int n2 = 0)                        //¼±¾ğ¿¡ °ªÀ» ÁÖ´Â ÇüÅÂ¸¦ ¸Å°³º¯¼ö ÃÊ±âÈ­
+	SimpleClass(int n1 = 0, int n2 = 0)                        //ì„ ì–¸ì— ê°’ì„ ì£¼ëŠ” í˜•íƒœë¥¼ ë§¤ê°œë³€ìˆ˜ ì´ˆê¸°í™”
 	{
 		num1 = n1;
 		num2 = n2;
@@ -20,15 +20,15 @@ public:
 
 int main(void)
 {
-	SimpleClass sc1();             //ÇÔ¼öÀÇ ¿øÇü ¼±¾ğ!(Ãâ·Â¿¡ ÇØ´çµÊ), ÇÔ¼öÀÌ¸§:sc1/ ÀÚ·áÇü:SimpleClass
-	SimpleClass mysc = sc1();      //´ëÀÔ¿¬»êÀÚ¸¦ ¸ÕÀú Ã£±â(¿À¸¥ÂÊ ¿ŞÂÊ ³ª´²¼­ ÇØ¼®!)
+	SimpleClass sc1();             //í•¨ìˆ˜ì˜ ì›í˜• ì„ ì–¸!(ì¶œë ¥ì— í•´ë‹¹ë¨), í•¨ìˆ˜ì´ë¦„:sc1/ ìë£Œí˜•:SimpleClass
+	SimpleClass mysc = sc1();      //ëŒ€ì…ì—°ì‚°ìë¥¼ ë¨¼ì € ì°¾ê¸°(ì˜¤ë¥¸ìª½ ì™¼ìª½ ë‚˜ëˆ ì„œ í•´ì„!)
 	mysc.ShowData();
 	return 0;
 }
 
 SimpleClass sc1()
 {
-	SimpleClass sc(20, 30);        //SimpleClassÅ¸ÀÔÀÇ °´Ã¼ »ı¼º ÄÚµå(ÀÔ·Â°ª 2°³¸¦ ÁÖ°í ÀÖÀ½) 
-		return sc;                  //sc(°´Ã¼) ¸®ÅÏ
+	SimpleClass sc(20, 30);        //SimpleClassíƒ€ì…ì˜ ê°ì²´ ìƒì„± ì½”ë“œ(ì…ë ¥ê°’ 2ê°œë¥¼ ì£¼ê³  ìˆìŒ) 
+		return sc;                  //sc(ê°ì²´) ë¦¬í„´
 }
 */

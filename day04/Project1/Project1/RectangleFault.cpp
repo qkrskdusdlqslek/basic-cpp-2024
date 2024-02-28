@@ -4,22 +4,22 @@ using namespace std;
 class Point
 {
 public:
-	int x;         // xÁÂÇ¥ÀÇ ¹üÀ§´Â 0ÀÌ»ó 100ÀÌÇÏ
-	int y;         // yÁÂÇ¥À¸ ¤Ó¹üÀ§´Â 0ÀÌ»ó 100ÀÌÇÏ
+	int x;         // xì¢Œí‘œì˜ ë²”ìœ„ëŠ” 0ì´ìƒ 100ì´í•˜
+	int y;         // yì¢Œí‘œìœ¼ ã…£ë²”ìœ„ëŠ” 0ì´ìƒ 100ì´í•˜
 };
 
 class Rectangle
 {
 public:
-	Point upLeft;              //Point Å¸ÀÔÀÇ º¯¼ö ¼±¾ğ
+	Point upLeft;              //Point íƒ€ì…ì˜ ë³€ìˆ˜ ì„ ì–¸
 	Point lowRight;
 
 public: 
 	void ShowRecInfo()
 	{
-		cout << "ÁÂ »ó´Ü: " << '[' << upLeft.x << ", ";
+		cout << "ì¢Œ ìƒë‹¨: " << '[' << upLeft.x << ", ";
 		cout << upLeft.y << ']' << endl;
-		cout << "¿ì »ó´Ü: " << '[' << lowRight.x << ", ";
+		cout << "ìš° ìƒë‹¨: " << '[' << lowRight.x << ", ";
 		cout << lowRight.y << ']' << endl << endl;
 	}
 };

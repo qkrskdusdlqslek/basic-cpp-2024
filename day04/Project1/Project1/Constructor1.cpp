@@ -7,7 +7,7 @@ private:
 	int num1;
 	int num2;
 public:
-	SimpleClass()                 //µğÆúÆ® »ı¼ºÀÚ
+	SimpleClass()                 //ë””í´íŠ¸ ìƒì„±ì
 	{
 		num1 = 0;
 		num2 = 0;
@@ -24,7 +24,7 @@ public:
 	}
 
 	/*
-	SimpleClass(int n1 = 0, int n2 = 0)            //¼±¾ğ¿¡ °ªÀ» ÁÖ´Â ÇüÅÂ¸¦ ¸Å°³º¯¼ö ÃÊ±âÈ­
+	SimpleClass(int n1 = 0, int n2 = 0)            //ì„ ì–¸ì— ê°’ì„ ì£¼ëŠ” í˜•íƒœë¥¼ ë§¤ê°œë³€ìˆ˜ ì´ˆê¸°í™”
 	{
 		num1 = n1;
 		num2 = n2;
