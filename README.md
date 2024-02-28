@@ -130,6 +130,8 @@ IoT 개발자 심화 프로그래밍 언어 학습리포지토리
 - 호출과 실행은 다름!
     - 멤버 이니셜라이저에서 알 수 있음. 
 
+- - ![ReturnObjDeadTime 해석](https://raw.githubusercontent.com/qkrskdusdlqslek/basic-cpp-2024/main/images/day06.png)
+
 ## 7일차
 
 ## 8일차
