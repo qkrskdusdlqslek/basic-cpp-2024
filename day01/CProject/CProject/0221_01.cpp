@@ -1,21 +1,21 @@
 /*#include <iostream>
 
-using namespace std;          // std ³×ÀÓ½ºÆäÀÌ½ºÀÇ ¸ğµç °ÍÀ» »ç¿ëÇÏ°Ú´Ù.
+using namespace std;          // std ë„¤ì„ìŠ¤í˜ì´ìŠ¤ì˜ ëª¨ë“  ê²ƒì„ ì‚¬ìš©í•˜ê² ë‹¤.
 
 int main() 
 {
 	int inKey;
-	cout << "¼ıÀÚ ÇÏ³ª¸¦ ÀÔ·ÂÇÏ¼¼¿ä > " << endl;
+	cout << "ìˆ«ì í•˜ë‚˜ë¥¼ ì…ë ¥í•˜ì„¸ìš” > " << endl;
 	cin >> inKey;
 
-	if (inKey == 5) {        // if(Á¶°Ç½Ä) { .... ½ÇÇà¹®   }
-		cout << "ºù°í" << endl;
+	if (inKey == 5) {        // if(ì¡°ê±´ì‹) { .... ì‹¤í–‰ë¬¸   }
+		cout << "ë¹™ê³ " << endl;
 	}
 	if (inKey > 5) {
-		cout << "¼ıÀÚ°¡ Å­´Ï´Ù." << endl;
+		cout << "ìˆ«ìê°€ í¼ë‹ˆë‹¤." << endl;
 	}
 	if (inKey < 5) {
-		cout << "¼ıÀÚ°¡ ÀÛ½À´Ï´Ù." << endl;
+		cout << "ìˆ«ìê°€ ì‘ìŠµë‹ˆë‹¤." << endl;
 	}
 	return 0;
 }

@@ -25,10 +25,10 @@ int main()
 	char op;
 	int val1, val2
 
-	std::cout << "µÎ°³ ¼ýÀÚ ÀÔ·Â: ";
+	std::cout << "ë‘ê°œ ìˆ«ìž ìž…ë ¥: ";
 	std::cin >> val1 >> val2;
 
-	std::cout << "¿¬»êÀÚ ÀÔ·Â: ";
+	std::cout << "ì—°ì‚°ìž ìž…ë ¥: ";
 	std::cin >> op;
 
 	if (val1 == '+') {

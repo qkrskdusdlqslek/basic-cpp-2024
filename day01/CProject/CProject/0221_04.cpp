@@ -1,5 +1,5 @@
 /*
-  ¹Ýº¹Á¦¾î¹®: for
+  ë°˜ë³µì œì–´ë¬¸: for
 
 
 #include <iostream>
