@@ -6,26 +6,26 @@ class SelfRef
 private:
 	int num;
 public:
-	SelfRef(int n) : num(n)    // ÀÌ´Ï¼È¶óÀÌÀú
+	SelfRef(int n) : num(n)    // ì´ë‹ˆì…œë¼ì´ì €
 	{
-		cout << "°´Ã¼»ı¼º" << endl;
+		cout << "ê°ì²´ìƒì„±" << endl;
 	}
 	SelfRef& Adder(int n)
 	{
 		num += n;
-		return *this;         // numÀÇ ÂüÁ¶, this°¡ ÀúÀåÇÏ°í ÀÖ´Â °ªÀº ÀÚ±âÀÚ½ÅÀÇ ÁÖ¼Ò°ª-> *this :°´Ã¼ ÀÚ±âÀÚ½Å 
+		return *this;         // numì˜ ì°¸ì¡°, thisê°€ ì €ì¥í•˜ê³  ìˆëŠ” ê°’ì€ ìê¸°ìì‹ ì˜ ì£¼ì†Œê°’-> *this :ê°ì²´ ìê¸°ìì‹  
 	}
 	SelfRef& ShowTwoNumber()
 	{
 		cout << num << endl;
-		return *this;       // this ¾È¿¡ µé¾îÀÖ´Â µ¥ÀÌÅÍ(num) ¹Ş°í ÀÖÀ½.
+		return *this;       // this ì•ˆì— ë“¤ì–´ìˆëŠ” ë°ì´í„°(num) ë°›ê³  ìˆìŒ.
 	}
 };
 
 int main(void)
-{                                    // obj¶ó´Â °´Ã¼ ÇÏ³ª »ı¼º
-	SelfRef obj(3);                //obj¶ó´Â SelfRef°´Ã¼´Â 3ÀÌ¶ó´Â °ªÀ» ÀÔ·Â¹Ş¾Æ..
-	SelfRef &ref = obj.Adder(2);   //obj¿¡¼­ Adder¶ó´Â ¸Ş¼­µå¸¦ È£ÃâÁß..
+{                                    // objë¼ëŠ” ê°ì²´ í•˜ë‚˜ ìƒì„±
+	SelfRef obj(3);                //objë¼ëŠ” SelfRefê°ì²´ëŠ” 3ì´ë¼ëŠ” ê°’ì„ ì…ë ¥ë°›ì•„..
+	SelfRef &ref = obj.Adder(2);   //objì—ì„œ Adderë¼ëŠ” ë©”ì„œë“œë¥¼ í˜¸ì¶œì¤‘..
 
 	obj.ShowTwoNumber();
 	ref.ShowTwoNumber();

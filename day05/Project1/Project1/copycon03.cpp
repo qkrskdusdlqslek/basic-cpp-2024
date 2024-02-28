@@ -12,7 +12,7 @@ public:
 	AA(const AA& copy) {
 		this->a = copy.a;
 		this->b = copy.b;
-		cout << "º¹»ç»ý¼ºÀÚ È£Ãâ" << endl;
+		cout << "ë³µì‚¬ìƒì„±ìž í˜¸ì¶œ" << endl;
 	}
 
 	

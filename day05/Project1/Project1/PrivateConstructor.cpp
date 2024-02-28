@@ -6,15 +6,15 @@ class AAA
 private:
 	int num;
 public:
-	AAA() : num(0) {}                      // ÀÌ´Ï¼È¶óÀÌÀú
+	AAA() : num(0) {}                      // ì´ë‹ˆì…œë¼ì´ì €
 	AAA& CreateInitObj(int n) const
 	{
-		AAA* ptr = new AAA(n);            // °ª º¯°æ ºÒ°¡
+		AAA* ptr = new AAA(n);            // ê°’ ë³€ê²½ ë¶ˆê°€
 		return *ptr;
 	}
 	void ShowNum() const { cout << num << endl; }
 private:
-	AAA(int n) : num(n) {}      //25ÇàÀÌ ¿À·ùÀÎ ÀÌÀ¯ -> ½Ì±ÛÅæÆĞÅÏ(°´Ã¼°¡ ´Ü ÇÏ³ª¸¸ ÇÊ¿äÇÒ ¶§)
+	AAA(int n) : num(n) {}      //25í–‰ì´ ì˜¤ë¥˜ì¸ ì´ìœ  -> ì‹±ê¸€í†¤íŒ¨í„´(ê°ì²´ê°€ ë‹¨ í•˜ë‚˜ë§Œ í•„ìš”í•  ë•Œ)
 };
 
 int main(void)
@@ -22,12 +22,12 @@ int main(void)
 	AAA base;
 	base.ShowNum();
 
-	// AAA a(10);       *¿À·ù : privateÀ¸·Î µÇ¾îÀÖ±â ¶§¹®¿¡ ¿ÜºÎ¿¡¼­ °´Ã¼¸¦ »ı¼ºÇÒ ¼ö ¾øÀ½!
+	// AAA a(10);       *ì˜¤ë¥˜ : privateìœ¼ë¡œ ë˜ì–´ìˆê¸° ë•Œë¬¸ì— ì™¸ë¶€ì—ì„œ ê°ì²´ë¥¼ ìƒì„±í•  ìˆ˜ ì—†ìŒ!
 
-	AAA& obj1 = base.CreateInitObj(3);      // AAAÅ¸ÀÔ¿¡ ÂüÁ¶º¯¼ö ¼±¾ğ | CreateInitObj ¸â¹öÇÔ¼ö¸¦ È£Ãâ
+	AAA& obj1 = base.CreateInitObj(3);      // AAAíƒ€ì…ì— ì°¸ì¡°ë³€ìˆ˜ ì„ ì–¸ | CreateInitObj ë©¤ë²„í•¨ìˆ˜ë¥¼ í˜¸ì¶œ
 	obj1.ShowNum();
 
-	AAA& obj2 = base.CreateInitObj(12);     // obj1°ú obj2´Â ´Ù¸¥°´Ã¼
+	AAA& obj2 = base.CreateInitObj(12);     // obj1ê³¼ obj2ëŠ” ë‹¤ë¥¸ê°ì²´
 	obj2.ShowNum();
 
 	delete& obj1;

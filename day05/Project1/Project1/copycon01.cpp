@@ -1,6 +1,6 @@
 /*
-  º¹»ç»ý¼ºÀÚ : °´Ã¼¸¦ º¹»çÇÒ ¶§ È£ÃâµÇ´Â »ý¼ºÀÚ
-  µû¶ó¼­ º¹»çÇÒ °´Ã¼¸¦ ÀÔ·ÂÀ¸·Î °¡Á®¾ß ÇÏ´Âµ¥,, ÀÌ¶§ ¿øº» °´Ã¼ÀÇ ÂüÁ¶¸¦ ÀÔ·ÂÀ¸·Î ¹Þ¾Æ¾ß ÇÑ´Ù.
+  ë³µì‚¬ìƒì„±ìž : ê°ì²´ë¥¼ ë³µì‚¬í•  ë•Œ í˜¸ì¶œë˜ëŠ” ìƒì„±ìž
+  ë”°ë¼ì„œ ë³µì‚¬í•  ê°ì²´ë¥¼ ìž…ë ¥ìœ¼ë¡œ ê°€ì ¸ì•¼ í•˜ëŠ”ë°,, ì´ë•Œ ì›ë³¸ ê°ì²´ì˜ ì°¸ì¡°ë¥¼ ìž…ë ¥ìœ¼ë¡œ ë°›ì•„ì•¼ í•œë‹¤.
 */
 /*#include <iostream>
 using namespace std;
@@ -8,13 +8,13 @@ using namespace std;
 class A {
 public:
 	A() {
-		cout << "µðÆúÆ® »ý¼ºÀÚ È£Ãâ" << endl;
+		cout << "ë””í´íŠ¸ ìƒì„±ìž í˜¸ì¶œ" << endl;
 	}
 	A(int n) {
-		cout << "A(int n) »ý¼ºÀÚ È£Ãâ" << endl;
+		cout << "A(int n) ìƒì„±ìž í˜¸ì¶œ" << endl;
 	}
-	A(const A& r) {      // º¹»ç»ý¼ºÀÚ , const¸¦ ºÙÀÌ´Â ÀÌÀ¯ : ¿øº»¿¡ ÇØ´çµÇ±â ¶§¹®¿¡ °ªÀÌ º¯°æµÇ¸é ¾ÈµÊ.
-		cout << "A(const A& r) »ý¼ºÀÚ È£Ãâ" << endl;
+	A(const A& r) {      // ë³µì‚¬ìƒì„±ìž , constë¥¼ ë¶™ì´ëŠ” ì´ìœ  : ì›ë³¸ì— í•´ë‹¹ë˜ê¸° ë•Œë¬¸ì— ê°’ì´ ë³€ê²½ë˜ë©´ ì•ˆë¨.
+		cout << "A(const A& r) ìƒì„±ìž í˜¸ì¶œ" << endl;
 	}
 };
 
@@ -24,21 +24,21 @@ void func(int a) {
 int main(void)
 {
 	int n = 10;
-	A obj1;            // µðÆúÆ® »ý¼ºÀÚ·Î °´Ã¼ »ý¼º
-	A obj2(10);        // ÀÔ·Â ÇÏ³ª °¡Áö´Â »ý¼ºÀÚ È£Ãâ, Á¤¼öÇü ÀÎÀÚ¸¦ °¡Áö´Â »ý¼ºÀÚ È£Ãâ
-	A obj3(obj2);      // º¹»ç »ý¼ºÀÚ È£ÃâÇÏ¿© obj1À» ±â¹ÝÀ¸·Î obj3¸¦ ÃÊ±âÈ­
+	A obj1;            // ë””í´íŠ¸ ìƒì„±ìžë¡œ ê°ì²´ ìƒì„±
+	A obj2(10);        // ìž…ë ¥ í•˜ë‚˜ ê°€ì§€ëŠ” ìƒì„±ìž í˜¸ì¶œ, ì •ìˆ˜í˜• ì¸ìžë¥¼ ê°€ì§€ëŠ” ìƒì„±ìž í˜¸ì¶œ
+	A obj3(obj2);      // ë³µì‚¬ ìƒì„±ìž í˜¸ì¶œí•˜ì—¬ obj1ì„ ê¸°ë°˜ìœ¼ë¡œ obj3ë¥¼ ì´ˆê¸°í™”
 	func(n);
 
 
 	return 0;
 }
 */
-/* Ãß°¡ ¼³¸í
-1. A()´Â µðÆúÆ® »ý¼ºÀÚ·Î,
-	-> ÀÎÀÚ ¾øÀÌ È£ÃâµÉ ¶§ ½ÇÇà.
-2. A(int n)Àº Á¤¼öÇü ÀÎÀÚ¸¦ ¹Þ´Â »ý¼ºÀÚ·Î,
-	=> Á¤¼öÇü ÀÎÀÚ°¡ ÁÖ¾îÁ³À» ¶§ È£Ãâ.
-3. A(const A& r)Àº º¹»ç »ý¼ºÀÚ·Î,
-	=> A Å¬·¡½ºÀÇ °´Ã¼¸¦ º¹»çÇÏ¿© »õ·Î¿î °´Ã¼¸¦ »ý¼ºÇÒ ¶§ È£Ãâ
+/* ì¶”ê°€ ì„¤ëª…
+1. A()ëŠ” ë””í´íŠ¸ ìƒì„±ìžë¡œ,
+	-> ì¸ìž ì—†ì´ í˜¸ì¶œë  ë•Œ ì‹¤í–‰.
+2. A(int n)ì€ ì •ìˆ˜í˜• ì¸ìžë¥¼ ë°›ëŠ” ìƒì„±ìžë¡œ,
+	=> ì •ìˆ˜í˜• ì¸ìžê°€ ì£¼ì–´ì¡Œì„ ë•Œ í˜¸ì¶œ.
+3. A(const A& r)ì€ ë³µì‚¬ ìƒì„±ìžë¡œ,
+	=> A í´ëž˜ìŠ¤ì˜ ê°ì²´ë¥¼ ë³µì‚¬í•˜ì—¬ ìƒˆë¡œìš´ ê°ì²´ë¥¼ ìƒì„±í•  ë•Œ í˜¸ì¶œ
 
 */

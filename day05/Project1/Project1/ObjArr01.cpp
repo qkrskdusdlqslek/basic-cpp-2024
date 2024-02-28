@@ -1,5 +1,5 @@
 /*
-  °´Ã¼¹è¿­
+  ê°ì²´ë°°ì—´
 */
 /*#define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
@@ -12,32 +12,32 @@ private:
 
 public:
 	Human(const char *aname, int age) {
-		cout << "»ı¼ºÀÚ È£Ãâ" << endl;
+		cout << "ìƒì„±ì í˜¸ì¶œ" << endl;
 		strcpy_s(name, aname);
-		this->age = age;       //°´Ã¼¿¡ ÀÖ´Â ÇÊµå°ªÀ» this¸¦ ÅëÇØ ..
+		this->age = age;       //ê°ì²´ì— ìˆëŠ” í•„ë“œê°’ì„ thisë¥¼ í†µí•´ ..
 	}
 	void HumanInfo() {
-		cout << "ÀÌ¸§: " << name << " ";
-		cout << "³ªÀÌ: " << age << endl;
+		cout << "ì´ë¦„: " << name << " ";
+		cout << "ë‚˜ì´: " << age << endl;
 	}
 	~Human() {
-		cout << "¼Ò¸êÀÚ È£Ãâ" << endl;
+		cout << "ì†Œë©¸ì í˜¸ì¶œ" << endl;
 		delete[]name;
 	}
 };
 int main()
 {
-	Human h[3] = {Human("È«±æµ¿", 50), Human("¾È¼öÈñ", 31), Human("ÀÌÇÑ¿À", 39)};     //°´Ã¼¹è¿­
+	Human h[3] = {Human("í™ê¸¸ë™", 50), Human("ì•ˆìˆ˜í¬", 31), Human("ì´í•œì˜¤", 39)};     //ê°ì²´ë°°ì—´
 
 	for (int i = 0; i < 3; i++) {
 		h[i].HumanInfo();
 	}
 
-	Human* h1 = new Human("°¡³ª´Ù", 50);   // new ¿¬»êÀÚ¸¦ ÅëÇØ¼­ heap ¿µ¿ª¿¡ ÀÌ¸§, ³ªÀÌ ÇÒ´ç(°´Ã¼ »ı¼º)
-	Human h2("¶ó¸¶¹Ù", 30);                // °´Ã¼·Î ¸â¹öÁ¢±Ù
+	Human* h1 = new Human("ê°€ë‚˜ë‹¤", 50);   // new ì—°ì‚°ìë¥¼ í†µí•´ì„œ heap ì˜ì—­ì— ì´ë¦„, ë‚˜ì´ í• ë‹¹(ê°ì²´ ìƒì„±)
+	Human h2("ë¼ë§ˆë°”", 30);                // ê°ì²´ë¡œ ë©¤ë²„ì ‘ê·¼
 	                                       
-	h1->HumanInfo();                       // °´Ã¼Æ÷ÀÎÅÍ¸¦ °¡Áö°í ¸â¹ö¿¡ Á¢±ÙÇÑ´Ù.(-> : arrow¿¬»êÀÚ)
-	//h1.HumanInfo();                      // °´Ã¼¸¦ ÅëÇÑ ¸â¹ö Á¢±Ù
+	h1->HumanInfo();                       // ê°ì²´í¬ì¸í„°ë¥¼ ê°€ì§€ê³  ë©¤ë²„ì— ì ‘ê·¼í•œë‹¤.(-> : arrowì—°ì‚°ì)
+	//h1.HumanInfo();                      // ê°ì²´ë¥¼ í†µí•œ ë©¤ë²„ ì ‘ê·¼
 
 	delete h1;
 

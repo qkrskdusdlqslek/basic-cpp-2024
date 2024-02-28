@@ -8,18 +8,18 @@ private:
 	char* name;
 	int age;
 public:
-	Person(const char* myname, int myage)     // ÀÔ·Â 2°³¸¦ °®´Â »ı¼ºÀÚ
+	Person(const char* myname, int myage)     // ì…ë ¥ 2ê°œë¥¼ ê°–ëŠ” ìƒì„±ì
 	{
-		int len = strlen(myname) + 1;        // strlen()Àº ¹®ÀÚ¿­ÀÇ ±æÀÌ¸¦ ±¸ÇÏ´Â ÇÔ¼ö, +1Àº ¹®ÀÚ¿­ÀÌ¶ó´Â °ÍÀ» ³ªÅ¸³»±â À§ÇÔ
-		name = new char[len];               // new Å°¿öµå´Â heap ¿µ¿ª¿¡ »õ·Î¿î ¸Ş¸ğ¸® °ø°£À» ÇÒ´çÇÏ¶ó´Â ¸í·É¾î¶ó°í »ı°¢ÇØ¾ß ÇÔ
-		cout << "charÀÇ Å©±â"<<sizeof(char) << endl;
-		strcpy(name, myname);              // myname°ú nameÀº ´Ù¸¥ °´Ã¼!
+		int len = strlen(myname) + 1;        // strlen()ì€ ë¬¸ìì—´ì˜ ê¸¸ì´ë¥¼ êµ¬í•˜ëŠ” í•¨ìˆ˜, +1ì€ ë¬¸ìì—´ì´ë¼ëŠ” ê²ƒì„ ë‚˜íƒ€ë‚´ê¸° ìœ„í•¨
+		name = new char[len];               // new í‚¤ì›Œë“œëŠ” heap ì˜ì—­ì— ìƒˆë¡œìš´ ë©”ëª¨ë¦¬ ê³µê°„ì„ í• ë‹¹í•˜ë¼ëŠ” ëª…ë ¹ì–´ë¼ê³  ìƒê°í•´ì•¼ í•¨
+		cout << "charì˜ í¬ê¸°"<<sizeof(char) << endl;
+		strcpy(name, myname);              // mynameê³¼ nameì€ ë‹¤ë¥¸ ê°ì²´!
 		age = myage;
 	}
 	void ShowPersonInfo() const
 	{
-		cout << "ÀÌ¸§: " << name << endl;
-		cout << "³ªÀÌ: " << age << endl;
+		cout << "ì´ë¦„: " << name << endl;
+		cout << "ë‚˜ì´: " << age << endl;
 	}
 	~Person()
 	{

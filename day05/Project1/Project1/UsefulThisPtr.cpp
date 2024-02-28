@@ -4,13 +4,13 @@ using namespace std;
 class TwoNumber
 {
 private:
-	int num1;           // Ã¹ ¹øÂ° Á¤¼ö¸¦ ÀúÀåÇÏ´Â ¸â¹ö º¯¼ö
-	int num2;           // µÎ ¹øÂ° Á¤¼ö¸¦ ÀúÀåÇÏ´Â ¸â¹ö º¯¼ö
+	int num1;           // ì²« ë²ˆì§¸ ì •ìˆ˜ë¥¼ ì €ìž¥í•˜ëŠ” ë©¤ë²„ ë³€ìˆ˜
+	int num2;           // ë‘ ë²ˆì§¸ ì •ìˆ˜ë¥¼ ì €ìž¥í•˜ëŠ” ë©¤ë²„ ë³€ìˆ˜
 public:
-    // »ý¼ºÀÚ: µÎ °³ÀÇ Á¤¼ö¸¦ ¹Þ¾Æ ¸â¹ö º¯¼ö¸¦ ÃÊ±âÈ­
+    // ìƒì„±ìž: ë‘ ê°œì˜ ì •ìˆ˜ë¥¼ ë°›ì•„ ë©¤ë²„ ë³€ìˆ˜ë¥¼ ì´ˆê¸°í™”
 	TwoNumber(int num1, int num2)
 	{
-		this->num1 = num1;      // this-> num1¿¡ Àü´Þ¹ÞÀº num1ÀÇ °ªÀ» Áý¾î³Ö´Ù 
+		this->num1 = num1;      // this-> num1ì— ì „ë‹¬ë°›ì€ num1ì˜ ê°’ì„ ì§‘ì–´ë„£ë‹¤ 
 		this->num2 = num2;
 	}
 	/*
@@ -35,13 +35,13 @@ int main(void)
 	return 0;
 }
 */
-/* Ãß°¡ ¼³¸í Á¸
-1. TwoNumber Å¬·¡½º
-=> num1°ú num2¶ó´Â µÎ °³ÀÇ ¸â¹ö º¯¼ö¸¦ °¡Áö°í ÀÖÀ½.
+/* ì¶”ê°€ ì„¤ëª… ì¡´
+1. TwoNumber í´ëž˜ìŠ¤
+=> num1ê³¼ num2ë¼ëŠ” ë‘ ê°œì˜ ë©¤ë²„ ë³€ìˆ˜ë¥¼ ê°€ì§€ê³  ìžˆìŒ.
 
-2. »ý¼ºÀÚ TwoNumber(int num1, int num2)
-=> µÎ °³ÀÇ ÀÎÀÚ¸¦ ¹Þ¾Æ¼­ num1°ú num2 ¸â¹ö º¯¼ö¿¡ °ªÀ» ÇÒ´ç.
+2. ìƒì„±ìž TwoNumber(int num1, int num2)
+=> ë‘ ê°œì˜ ì¸ìžë¥¼ ë°›ì•„ì„œ num1ê³¼ num2 ë©¤ë²„ ë³€ìˆ˜ì— ê°’ì„ í• ë‹¹.
 
-3. ShowTwoNumber() ÇÔ¼ö
-=> °´Ã¼ÀÇ num1°ú num2 ¸â¹ö º¯¼ö¸¦ Ãâ·Â.
+3. ShowTwoNumber() í•¨ìˆ˜
+=> ê°ì²´ì˜ num1ê³¼ num2 ë©¤ë²„ ë³€ìˆ˜ë¥¼ ì¶œë ¥.
 */

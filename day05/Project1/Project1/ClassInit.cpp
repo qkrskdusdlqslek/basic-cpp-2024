@@ -28,9 +28,9 @@ public:
 int main(void)
 {
 	SoSimple sim1(15, 30);
-	cout << "»ý¼º ¹× ÃÊ±âÈ­ Á÷Àü" << endl;
-	SoSimple sim2 = sim1;        // SoSimple sim2(sim1); À¸·Î º¯È¯!
-	cout << "»ý¼º ¹× ÃÊ±âÈ­ Á÷ÈÄ" << endl;
+	cout << "ìƒì„± ë° ì´ˆê¸°í™” ì§ì „" << endl;
+	SoSimple sim2 = sim1;        // SoSimple sim2(sim1); ìœ¼ë¡œ ë³€í™˜!
+	cout << "ìƒì„± ë° ì´ˆê¸°í™” ì§í›„" << endl;
 	sim2.ShowSimpleData();
 
 	return 0;

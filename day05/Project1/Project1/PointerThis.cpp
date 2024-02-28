@@ -7,11 +7,11 @@ class SoSimple
 private:
 	int num;
 public:
-	SoSimple(int num) //: num(n)   ÀÌ´Ï¼È¶óÀÌÀú
+	SoSimple(int num) //: num(n)   ì´ë‹ˆì…œë¼ì´ì €
 	{
 		this->num = num;
 		cout << "num=" << num << ", ";
-		cout << "address=" << this << endl;   //this´Â °´Ã¼ ÀÚ±âÀÚ½ÅÀ» °¡¸®Å´
+		cout << "address=" << this << endl;   //thisëŠ” ê°ì²´ ìê¸°ìì‹ ì„ ê°€ë¦¬í‚´
 	}
 	void ShowSimpleData()          
 	{
@@ -19,7 +19,7 @@ public:
 	}
 	SoSimple* GetThisPointer()
 	{
-		return this;   //this·Î ÀÎÇØ °´Ã¼ ÀÚ±âÀÚ½ÅÀÇ ÁÖ¼Ò¸¦ Æ÷ÀÎÅÍ·Î °¡¸®Å°°í ÀÖÀ½
+		return this;   //thisë¡œ ì¸í•´ ê°ì²´ ìê¸°ìì‹ ì˜ ì£¼ì†Œë¥¼ í¬ì¸í„°ë¡œ ê°€ë¦¬í‚¤ê³  ìˆìŒ
 	}
 };
 

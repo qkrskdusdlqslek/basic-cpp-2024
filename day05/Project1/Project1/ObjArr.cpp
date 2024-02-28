@@ -29,8 +29,8 @@ public:
 	}
 	void SetPersonInfo() const
 	{
-		cout << "ÀÌ¸§: " << name << ", ";
-		cout << "³ªÀÌ: " << age << endl;
+		cout << "ì´ë¦„: " << name << ", ";
+		cout << "ë‚˜ì´: " << age << endl;
 	}
 	~Person()
 	{
@@ -41,18 +41,18 @@ public:
 
 int main(void)
 {
-	Person parr[3];              // °´Ã¼¹è¿­(°´Ã¼Å¸ÀÔÀº Person)
+	Person parr[3];              // ê°ì²´ë°°ì—´(ê°ì²´íƒ€ìž…ì€ Person)
 
-	char namestr[100];           // ¹®ÀÚ¹è¿­
-	char* strptr;                // char Å¸ÀÔÀÇ Æ÷ÀÎÅÍº¯¼ö
+	char namestr[100];           // ë¬¸ìžë°°ì—´
+	char* strptr;                // char íƒ€ìž…ì˜ í¬ì¸í„°ë³€ìˆ˜
 	int age;
 	int len;
 
 	for (int i = 0; i < 3; i++)
 	{
-		cout << "ÀÌ¸§: ";
+		cout << "ì´ë¦„: ";
 		cin >> namestr;
-		cout << "³ªÀÌ: ";
+		cout << "ë‚˜ì´: ";
 		cin >> age;
 
 		len = strlen(namestr) + 1;
