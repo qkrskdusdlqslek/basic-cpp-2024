@@ -5,8 +5,8 @@ using namespace std;
 
 char * MakeStrAdr(int len)
 {
-	char * str = (char*)malloc(sizeof(char) * len);         //C Å¸ÀÔ: heap¿µ¿ª¿¡ ¸Ş¸ğ¸® ÇÒ´ç/ malloc µÚ¿¡ Å©±â¸¦ Àû¾î¾ß ÇÔ
-	printf("char size: %llu£Ün", sizeof(char));
+	char * str = (char*)malloc(sizeof(char) * len);         //C íƒ€ì…: heapì˜ì—­ì— ë©”ëª¨ë¦¬ í• ë‹¹/ malloc ë’¤ì— í¬ê¸°ë¥¼ ì ì–´ì•¼ í•¨
+	printf("char size: %lluï¿¦n", sizeof(char));
 	return str;
 }
 

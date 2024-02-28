@@ -12,9 +12,9 @@ void Car::InitMembers(char* ID, int fuel)
 
 void Car::ShowCarState()
 {
-	cout << "¼ÒÀ¯ÀÚID: " << gamerID << endl;
-	cout << "¿¬·á¶û: " << fuelGauge << "%" << endl;
-	cout << "ÇöÀç¼Óµµ: " << "km/s" << endl;
+	cout << "ì†Œìœ ìžID: " << gamerID << endl;
+	cout << "ì—°ë£Œëž‘: " << fuelGauge << "%" << endl;
+	cout << "í˜„ìž¬ì†ë„: " << "km/s" << endl;
 }
 
 void Car::Accel()

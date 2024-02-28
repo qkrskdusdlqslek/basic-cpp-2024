@@ -3,9 +3,9 @@ using namespace std;
 
 namespace CAR_CONST
 {
-	enum                                                 // ¿­°ÅÇü
+	enum                                                 // ì—´ê±°í˜•
 	{
-		ID_LEN         =20,                              // »ó¼öÈ­
+		ID_LEN         =20,                              // ìƒìˆ˜í™”
 		MAX_SPD        =200,
 		FULL_STEP      =2,
 		ACC_STEP       =10,
@@ -15,22 +15,22 @@ namespace CAR_CONST
 
 struct Car
 {
-	char gamerID[CAR_CONST::ID_LEN];                      //ÇØ¼®) char gamerID[20]; , :: -> ¹üÀ§¿¬»êÀÚ
+	char gamerID[CAR_CONST::ID_LEN];                      //í•´ì„) char gamerID[20]; , :: -> ë²”ìœ„ì—°ì‚°ì
 	int fuelGauge;
 	int curSpeed;                        
 
 	void showCarState()
 	{
-		cout << "¼ÒÀ¯ÀÚID: " << gamerID << endl;
-		cout << "¿¬·á¶û: " << fuelGauge << "%" << endl;
-		cout << "ÇöÀç¼Óµµ: " << curSpeed << "km/s" << endl;
+		cout << "ì†Œìœ ìID: " << gamerID << endl;
+		cout << "ì—°ë£Œë‘: " << fuelGauge << "%" << endl;
+		cout << "í˜„ì¬ì†ë„: " << curSpeed << "km/s" << endl;
 	}
 	void Accel()
 	{
-		if (fuelGauge <= 0)                                   //ÇØ¼®)fuelGauge:100 , curSpeed=0
+		if (fuelGauge <= 0)                                   //í•´ì„)fuelGauge:100 , curSpeed=0
 			return;
 		else
-			fuelGauge -= CAR_CONST::FULL_STEP;               //ÇØ¼®)fuelGuage=98
+			fuelGauge -= CAR_CONST::FULL_STEP;               //í•´ì„)fuelGuage=98
 
 		if ((curSpeed + CAR_CONST::ACC_STEP) >= CAR_CONST::MAX_SPD)
 		{
@@ -38,7 +38,7 @@ struct Car
 			return;
 		}
 
-		curSpeed += CAR_CONST::ACC_STEP;                     //ÇØ¼®)curSpeed=10
+		curSpeed += CAR_CONST::ACC_STEP;                     //í•´ì„)curSpeed=10
 	}
 	void Break()
 	{
@@ -55,7 +55,7 @@ struct Car
 int main(void)
 {
 	Car run99 = { "run99", 100, 0 };
-	run99.Accel();  //98, 10                      //Accel() ÇÔ¼ö È£ÃâÁß.. ÇØ¼®) run99¾È¿¡ ÀÖ´Â Accel ÇÔ¼ö¸¦ ½ÇÇà½ÃÄÑ¶ó
+	run99.Accel();  //98, 10                      //Accel() í•¨ìˆ˜ í˜¸ì¶œì¤‘.. í•´ì„) run99ì•ˆì— ìˆëŠ” Accel í•¨ìˆ˜ë¥¼ ì‹¤í–‰ì‹œì¼œë¼
 	run99.Accel(); //96, 20
 	run99.showCarState();
 	run99.Break();

@@ -4,8 +4,8 @@ class AClass {
 private:
 	int num;
 
-public:                                   // Á¢±ÙÁ¦¾îÁö½ÃÀÚ
-	AClass(int anum) {                   //»ı¼ºÀÚ : ÃÊ±âÈ­ ½ÃÅ°´Â ¿ªÇÒ
+public:                                   // ì ‘ê·¼ì œì–´ì§€ì‹œì
+	AClass(int anum) {                   //ìƒì„±ì : ì´ˆê¸°í™” ì‹œí‚¤ëŠ” ì—­í• 
 		num = anum;
 	}
 	void AInfo() {

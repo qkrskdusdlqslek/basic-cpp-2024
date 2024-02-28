@@ -2,10 +2,10 @@
 #include <stdlib.h>
 using namespace std;
 
-class Simple                                                   // class´Â ¶Ç ÇÏ³ªÀÇ Å¸ÀÔ
+class Simple                                                   // classëŠ” ë˜ í•˜ë‚˜ì˜ íƒ€ì…
 {
 public:
-	Simple()                                                  // Simple() = ÇÔ¼ö, »ı¼ºÀÚ(Å¬·¡½º ÀÌ¸§°ú °°Àº ¸Å¼­µå)
+	Simple()                                                  // Simple() = í•¨ìˆ˜, ìƒì„±ì(í´ë˜ìŠ¤ ì´ë¦„ê³¼ ê°™ì€ ë§¤ì„œë“œ)
 	{
 		cout << "I'm simple constructor!" << endl;
 	}
@@ -14,13 +14,13 @@ public:
 int main(void)
 {
 	cout << "case 1: ";
-	Simple* sp1 = new Simple;                                // new ¿¬»êÀÚ¸¦ ÅëÇÑ °´Ã¼»ı¼º
+	Simple* sp1 = new Simple;                                // new ì—°ì‚°ìë¥¼ í†µí•œ ê°ì²´ìƒì„±
 
 	cout << "case2: ";
-	Simple* sp2 = (Simple*)malloc(sizeof(Simple) * 1);      // heap¿µ¿ª¿¡ ¸Ş¸ğ¸® ÇÒ´ç/ malloc µÚ¿¡ Å©±â¸¦ Àû¾î¾ß ÇÔ
+	Simple* sp2 = (Simple*)malloc(sizeof(Simple) * 1);      // heapì˜ì—­ì— ë©”ëª¨ë¦¬ í• ë‹¹/ malloc ë’¤ì— í¬ê¸°ë¥¼ ì ì–´ì•¼ í•¨
 
 	cout << endl << "end of main" << endl;
-	delete sp1;                                             // °´Ã¼¸¦ ¹İÈ¯ÇÑ´Ù
+	delete sp1;                                             // ê°ì²´ë¥¼ ë°˜í™˜í•œë‹¤
 	free(sp2);
 	return 0;
 }

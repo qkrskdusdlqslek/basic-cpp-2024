@@ -3,7 +3,7 @@ using namespace std;
 
 int main()
 {
-	const int num = 20;         // »ó¼ö¸¦ ¼±¾ğÇÒ¶§´Â ¹Ù·Î ÃÊ±âÈ­¸¦ ÇØ¾ß ÇÔ
+	const int num = 20;         // ìƒìˆ˜ë¥¼ ì„ ì–¸í• ë•ŒëŠ” ë°”ë¡œ ì´ˆê¸°í™”ë¥¼ í•´ì•¼ í•¨
 	int& ref = num;             // 
 	ref += 10;
 	cout << num << endl;

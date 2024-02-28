@@ -5,7 +5,7 @@ AClass::AClass(int anum) {
 	num = anum;
 }
 void AClass::AInfo() {
-	std::cout << "AClass::È«±æµ¿ " <<"" << std::endl;
+	std::cout << "AClass::í™ê¸¸ë™ " <<"" << std::endl;
 }
 
 int main(void)
@@ -14,8 +14,8 @@ int main(void)
 
 
 	int Human;
-	Human h("È«±æµ¿", 50, "¹é¼ö");        //°´Ã¼»ý¼º¹æ¹ý
-	h.humanInfo();                        // ³ª´Â 50»ìÀÎ ¹é¼ö È«±æµ¿ÀÔ´Ï´Ù.
+	Human h("í™ê¸¸ë™", 50, "ë°±ìˆ˜");        //ê°ì²´ìƒì„±ë°©ë²•
+	h.humanInfo();                        // ë‚˜ëŠ” 50ì‚´ì¸ ë°±ìˆ˜ í™ê¸¸ë™ìž…ë‹ˆë‹¤.
 
 	return 0;
 }
