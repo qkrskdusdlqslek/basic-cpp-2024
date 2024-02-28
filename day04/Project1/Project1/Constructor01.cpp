@@ -6,12 +6,12 @@ class MyClass {
 
 public:
 
-	MyClass() {                                            // ÀÔ·ÂÀÌ ¾ø´Â »ı¼ºÀÚ(default »ı¼ºÀÚ)
-		cout << "»ı¼ºÀÚ È£Ãâ: MyClass()" << endl;        
+	MyClass() {                                            // ì…ë ¥ì´ ì—†ëŠ” ìƒì„±ì(default ìƒì„±ì)
+		cout << "ìƒì„±ì í˜¸ì¶œ: MyClass()" << endl;        
 		num = 10;
 	}
-	MyClass(int anum) {                   // »ı¼ºÀÚ ¿À¹ö·Îµù
-		cout << "»ı¼ºÀÚ È£Ãâ: MyClass(int )" << endl;     // ÀÔ·ÂÀÌ ÇÏ³ª ÀÖ´Â »ı¼ºÀÚ
+	MyClass(int anum) {                   // ìƒì„±ì ì˜¤ë²„ë¡œë”©
+		cout << "ìƒì„±ì í˜¸ì¶œ: MyClass(int )" << endl;     // ì…ë ¥ì´ í•˜ë‚˜ ìˆëŠ” ìƒì„±ì
 		num = anum;       
 	}
 	void MyClassInfo() {
@@ -21,14 +21,14 @@ public:
 
 int main()
 {
-	// MyClass *m = new MyClass();         //heap ¿µ¿ª¿¡ »ı¼ºÀÚ¸¦ »ı¼ºÇÏ±â À§ÇØ¼­ new Å°¿öµå¸¦ »ç¿ëÇÔ
+	// MyClass *m = new MyClass();         //heap ì˜ì—­ì— ìƒì„±ìë¥¼ ìƒì„±í•˜ê¸° ìœ„í•´ì„œ new í‚¤ì›Œë“œë¥¼ ì‚¬ìš©í•¨
 
-	MyClass m1;                            // °´Ã¼¸¦ »ı¼ºÇÏ´Â ÄÚµå, »ı¼ºÀÚ°¡ ÀÚµ¿À¸·Î È£ÃâµÈ´Ù
+	MyClass m1;                            // ê°ì²´ë¥¼ ìƒì„±í•˜ëŠ” ì½”ë“œ, ìƒì„±ìê°€ ìë™ìœ¼ë¡œ í˜¸ì¶œëœë‹¤
 	m1.MyClassInfo();                     
 	MyClass m2(20);
 	m2.MyClassInfo();
 
-	// MyClass m2();                      // m2¶ó´Â ¸Ş¼­µå¸¦ È£ÃâÁß, ÀÌ ÇüÅÂ´Â ±×³É ÇÔ¼ö È£ÃâÇÏ´Â Çü½Ä
+	// MyClass m2();                      // m2ë¼ëŠ” ë©”ì„œë“œë¥¼ í˜¸ì¶œì¤‘, ì´ í˜•íƒœëŠ” ê·¸ëƒ¥ í•¨ìˆ˜ í˜¸ì¶œí•˜ëŠ” í˜•ì‹
 
 	return 0;
 }
