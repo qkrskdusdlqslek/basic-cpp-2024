@@ -134,7 +134,22 @@ IoT 개발자 심화 프로그래밍 언어 학습리포지토리
     - ![ReturnObjDeadTime 해석](https://raw.githubusercontent.com/qkrskdusdlqslek/basic-cpp-2024/main/images/day06.png)
 
 ## 7일차
+- 중간 정리
+    - ![Practice01](https://raw.githubusercontent.com/qkrskdusdlqslek/basic-cpp-2024/main/images/Practice01.png)
+	
+- static 멤버변수(클래스 변수)
+    - 객체 없이 클래스에 접근 가능한 변수
+	
+- instance 멤버변수(앞서 배운 모든 것들은 객체 변수임)
+    - 객체를 생성해야만 접근 가능한 변수
 
+- Mutable 키워드
+    - 사용하면 const 함수 내에서의 값의 변경을 예외적으로 허용한다(상수화가 없어진다, 값 고정이 안된다..)
+
+- explicit 키워드
+    - 자신이 원하지 않은 형변환이 일어나지 않도록 제안하는 키워드
+
+- 상속 : 확장의 의미(기존에 있는 것에서 +하는 것)
 ## 8일차
 
 ## 9일차
