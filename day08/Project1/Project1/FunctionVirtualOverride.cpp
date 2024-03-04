@@ -21,7 +21,7 @@ public:
 
 int main(void)
 {
-	Third* tptr = new Third();
+	Third* tptr = new Third();        // 동적 바인딩(프로그램 실행 도중에 호출될 멤버 함수가 밝혀지는 것)
 	Second* sptr = tptr;
 	First* fptr = sptr;
 

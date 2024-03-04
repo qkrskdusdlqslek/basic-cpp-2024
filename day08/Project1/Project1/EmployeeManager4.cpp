@@ -1,3 +1,4 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
 #include <cstring>
 using namespace std;
@@ -15,6 +16,12 @@ public:
 	{
 		cout << "name: " << name << endl;
 	}
+	virtual int GetPay() const
+	{
+		return 0;
+	}
+	virtual void ShowSalaryInfo() const
+	{  }
 };
 
 class PermanentWorker : public Employee
@@ -74,9 +81,8 @@ public:
 		salesResult += value;
 	}
 	int GetPay() const
-	{   
-		cout << "SalesWorker" << endl;          // 오버라이딩 된 멤버함수는 자식것이 실행된다.
-		return PermanentWorker::GetPay()       // 따라서 재정의된 부모것을 호출하려면 PermanentWorker(부모)의 GetPay 함수 호출
+	{
+		return PermanentWorker::GetPay()
 			+ (int)(salesResult * bonusRatio);
 	}
 	void ShowSalaryInfo() const
@@ -100,18 +106,18 @@ public:
 	}
 	void ShowAllSalaryInfo() const
 	{
-		/*
-		for(int i=0; i<empNum; i++)
+
+		for (int i = 0; i < empNum; i++)
 			empList[i]->ShowSalaryInfo();
-		*/
+
 	}
 	void ShowTotalSalary() const
 	{
 		int sum = 0;
-		/*
-		for(int i=0; i<empNum; i++)
-			sum+=empList[i]->GetPay();
-		*/
+
+		for (int i = 0; i < empNum; i++)
+			sum += empList[i]->GetPay();
+
 		cout << "salary sum: " << sum << endl;
 	}
 	~EmployeeHandler()
