@@ -21,7 +21,7 @@ public:
 
 int main(void)
 {
-	Third* tptr = new Third();        // µ¿Àû ¹ÙÀÎµù(ÇÁ·Î±×·¥ ½ÇÇà µµÁß¿¡ È£ÃâµÉ ¸â¹ö ÇÔ¼ö°¡ ¹àÇôÁö´Â °Í)
+	Third* tptr = new Third();        // ë™ì  ë°”ì¸ë”©(í”„ë¡œê·¸ë¨ ì‹¤í–‰ ë„ì¤‘ì— í˜¸ì¶œë  ë©¤ë²„ í•¨ìˆ˜ê°€ ë°í˜€ì§€ëŠ” ê²ƒ)
 	Second* sptr = tptr;
 	First* fptr = sptr;
 

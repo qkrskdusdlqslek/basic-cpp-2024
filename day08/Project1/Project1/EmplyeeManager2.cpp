@@ -2,7 +2,7 @@
 #include <iostream>
 #include <cstring>
 using namespace std;
-// Àç»ç¿ëÀÌ °¡´ÉÇÑ classµé(ÇÊ¿äÇÑ Å¬·¡½º¸¸ »ç¿ë °¡´ÉÇÔ)
+// ì¬ì‚¬ìš©ì´ ê°€ëŠ¥í•œ classë“¤(í•„ìš”í•œ í´ë˜ìŠ¤ë§Œ ì‚¬ìš© ê°€ëŠ¥í•¨)
 class Employee        
 {
 private:
@@ -21,7 +21,7 @@ public:
 class PermanentWorker : public Employee
 {
 private:
-	int salary;          // ¿ù ±Ş¿©
+	int salary;          // ì›” ê¸‰ì—¬
 public:
 	PermanentWorker(const char* name, int money)
 		: Employee(name), salary(money)
@@ -76,18 +76,18 @@ public:
 
 int main(void)
 {
-	// Á÷¿ø°ü¸®¸¦ ¸ñÀûÀ¸·Î ¼³°èµÈ ÄÁÆ®·Ñ Å¬·¡½ºÀÇ °´Ã¼»ı¼º
+	// ì§ì›ê´€ë¦¬ë¥¼ ëª©ì ìœ¼ë¡œ ì„¤ê³„ëœ ì»¨íŠ¸ë¡¤ í´ë˜ìŠ¤ì˜ ê°ì²´ìƒì„±
 	EmployeeHandler handler;
 
-	// Á÷¿ø µî·Ï
+	// ì§ì› ë“±ë¡
 	handler.AddEmployee(new PermanentWorker("KIM", 1000));
 	handler.AddEmployee(new PermanentWorker("LEE", 1500));
 	handler.AddEmployee(new PermanentWorker("JUN", 2000));
 
-	// ÀÌ¹ø ´Ş¿¡ ÁöºÒÇØ¾ß ÇÒ ±Ş¿©ÀÇ Á¤º¸
+	// ì´ë²ˆ ë‹¬ì— ì§€ë¶ˆí•´ì•¼ í•  ê¸‰ì—¬ì˜ ì •ë³´
 	handler.ShowAllSalaryInfo();
 
-	// ÀÌ¹ø ´Ş¿¡ ÁöºÒÇØ¾ß ÇÒ ±Ş¿©ÀÇ ÃÑÇÕ
+	// ì´ë²ˆ ë‹¬ì— ì§€ë¶ˆí•´ì•¼ í•  ê¸‰ì—¬ì˜ ì´í•©
 	handler.ShowTotalSalary();
 
 	return 0;

@@ -4,27 +4,27 @@ using namespace std;
 class RemoteControl
 {
 public:
-	virtual void on() { cout << "remote" << endl; }     // virtual °¡»óÇÔ¼ö
+	virtual void on() { cout << "remote" << endl; }     // virtual ê°€ìƒí•¨ìˆ˜
 	
 };
 class SamsungTv : public RemoteControl
 {
 public:
-	void on() { cout << "»ï¼º TV on" << endl; }
+	void on() { cout << "ì‚¼ì„± TV on" << endl; }
 };
 class LgTv : public RemoteControl
 {
 public:
-	void on() { cout << "¿¤Áö TV on" << endl; }
+	void on() { cout << "ì—˜ì§€ TV on" << endl; }
 };
 
 int main(void)
 {
-	RemoteControl * remote = new SamsungTv();    // ÇÏ³ª¸¸ ¸¸µé±â..
+	RemoteControl * remote = new SamsungTv();    // í•˜ë‚˜ë§Œ ë§Œë“¤ê¸°..
 	
-	remote->on();             //remote °´Ã¼ »ý¼º -> SamsungTv ½ÇÇà
-	remote = new LgTv();      // LgTv °´Ã¼ »ý¼º
-	remote->on();             // LgTv ½ÇÇà
+	remote->on();             //remote ê°ì²´ ìƒì„± -> SamsungTv ì‹¤í–‰
+	remote = new LgTv();      // LgTv ê°ì²´ ìƒì„±
+	remote->on();             // LgTv ì‹¤í–‰
 
 	
 	delete remote; 

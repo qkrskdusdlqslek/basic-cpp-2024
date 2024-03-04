@@ -1,34 +1,34 @@
 #include <iostream>
 using namespace std;
 
-// Å¬·¡½º Data¸¦ Èä³» ³½ ¿µ¿ª
+// í´ëž˜ìŠ¤ Dataë¥¼ í‰ë‚´ ë‚¸ ì˜ì—­
 typedef struct Data    
-{ // ¼±¾ðºÎ¿¡´Â ¸Å°³º¯¼ö ÀÌ¸§ÀÌ »ý·«ÇØµµ µÈ´Ù.(Å¸ÀÔ¸¸ ¿À¸é µÊ)
+{ // ì„ ì–¸ë¶€ì—ëŠ” ë§¤ê°œë³€ìˆ˜ ì´ë¦„ì´ ìƒëžµí•´ë„ ëœë‹¤.(íƒ€ìž…ë§Œ ì˜¤ë©´ ë¨)
 	int data;
-	void (*ShowData)(Data*);      // ShowData ¸â¹öÇÔ¼ö ¼±¾ð(¼±¾ðºÎ¿¡ * ÀÖÀ¸¸é Æ÷ÀÎÅÍ)-> ÇÔ¼ö ÀÌ¸§À» °¡Áö°í ÀÖ´Â ÁÖ¼Ò´Ù.
-	void (*Add)(Data*, int);      // Add ¸â¹öÇÔ¼ö ¼±¾ð
+	void (*ShowData)(Data*);      // ShowData ë©¤ë²„í•¨ìˆ˜ ì„ ì–¸(ì„ ì–¸ë¶€ì— * ìžˆìœ¼ë©´ í¬ì¸í„°)-> í•¨ìˆ˜ ì´ë¦„ì„ ê°€ì§€ê³  ìžˆëŠ” ì£¼ì†Œë‹¤.
+	void (*Add)(Data*, int);      // Add ë©¤ë²„í•¨ìˆ˜ ì„ ì–¸
 } Data;
 
-void ShowData(Data* THIS)             // ShowData ¸â¹öÇÔ¼ö Á¤ÀÇ
+void ShowData(Data* THIS)             // ShowData ë©¤ë²„í•¨ìˆ˜ ì •ì˜
 {
 	cout << "Data: " << THIS->data << endl; 
 }    
-void Add(Data* THIS, int num)         // Add ¸â¹öÇÔ¼ö Á¤ÀÇ
+void Add(Data* THIS, int num)         // Add ë©¤ë²„í•¨ìˆ˜ ì •ì˜
 
 { 
 	THIS->data += num; 
 }                     
 
-// ÀûÀýÈ÷ º¯°æµÈ main ÇÔ¼ö
+// ì ì ˆížˆ ë³€ê²½ëœ main í•¨ìˆ˜
 int main(void)
 {
-	Data obj1 = { 15, ShowData, Add };          // Data ±¸Á¶Ã¼ º¯¼ö obj1 ¼±¾ð°ú ÃÊ±âÈ­
-	Data obj2 = { 7, ShowData, Add };           // Data ±¸Á¶Ã¼ º¯¼ö obj2 ¼±¾ð°ú ÃÊ±âÈ­
+	Data obj1 = { 15, ShowData, Add };          // Data êµ¬ì¡°ì²´ ë³€ìˆ˜ obj1 ì„ ì–¸ê³¼ ì´ˆê¸°í™”
+	Data obj2 = { 7, ShowData, Add };           // Data êµ¬ì¡°ì²´ ë³€ìˆ˜ obj2 ì„ ì–¸ê³¼ ì´ˆê¸°í™”
 
-	obj1.Add(&obj1, 17);     // ±¸Á¶Ã¼ º¯¼ö¿¡ ÁÖ¼Ò¸¦ Àü´ÞÇØÁÖ°í ÀÖÀ½. 
-	                         // Add¶ó´Â ¸â¹öÇÔ¼ö¿¡ ÀÔ·ÂÀÇ Ã¹¹øÂ° ÀÎÀÚ´Â µ¿ÀÏÇÑ Å¸ÀÔÀÇ THIS¿¡ ÀúÀå
+	obj1.Add(&obj1, 17);     // êµ¬ì¡°ì²´ ë³€ìˆ˜ì— ì£¼ì†Œë¥¼ ì „ë‹¬í•´ì£¼ê³  ìžˆìŒ. 
+	                         // Addë¼ëŠ” ë©¤ë²„í•¨ìˆ˜ì— ìž…ë ¥ì˜ ì²«ë²ˆì§¸ ì¸ìžëŠ” ë™ì¼í•œ íƒ€ìž…ì˜ THISì— ì €ìž¥
 	obj2.Add(&obj2, 9);
-	obj1.ShowData(&obj1);    // µ¥ÀÌÅÍ Å¸ÀÔÀÇ Æ÷ÀÎÅÍ·Î ¹ÞÀ» ¼ö ÀÖ°Ô ¸¸µé¾îÁ® ÀÖÀ½
+	obj1.ShowData(&obj1);    // ë°ì´í„° íƒ€ìž…ì˜ í¬ì¸í„°ë¡œ ë°›ì„ ìˆ˜ ìžˆê²Œ ë§Œë“¤ì–´ì ¸ ìžˆìŒ
 	obj2.ShowData(&obj2);
 
 	return 0;

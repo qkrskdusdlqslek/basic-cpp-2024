@@ -13,7 +13,7 @@ public:
 	void Study() { cout << "Study" << endl; }
 };
 
-class PartTimeStudent : public Student      // 3°³ÀÇ 
+class PartTimeStudent : public Student      // 3ê°œì˜ 
 {
 public:
 	void Work() { cout << "Work" << endl; }
@@ -22,16 +22,16 @@ public:
 int main(void)
 {
 
-	//Student * ptr0 = new Student();          µ¿ÀÏÇÑ Å¸ÀÔÀ¸·Î »ç¿ëÇÏ´Â °ÍÀÌ ¿øÄ¢ÀÌ´Ù.
+	//Student * ptr0 = new Student();          ë™ì¼í•œ íƒ€ìž…ìœ¼ë¡œ ì‚¬ìš©í•˜ëŠ” ê²ƒì´ ì›ì¹™ì´ë‹¤.
 	/*
-	ºÎ¸ð °´Ã¼ Æ÷ÀÎÅÍ·Î ÀÚ½Ä °´Ã¼¸¦ °¡¸®Å³ ¼ö ÀÖ´Ù.
-	ÇÏÁö¸¸ ÀÚ½ÄÅ¸ÀÔÀÇ °´Ã¼ Æ÷ÀÎÅÍ·Î ºÎ¸ð °´Ã¼´Â °¡¸®Å³ ¼ö ¾ø´Ù.
-	±×¸®°í Á¢±ÙÀº °´Ã¼ Æ÷ÀÎÅÍÀÇ Å¸ÀÔÀ» µû¸¥´Ù.
+	ë¶€ëª¨ ê°ì²´ í¬ì¸í„°ë¡œ ìžì‹ ê°ì²´ë¥¼ ê°€ë¦¬í‚¬ ìˆ˜ ìžˆë‹¤.
+	í•˜ì§€ë§Œ ìžì‹íƒ€ìž…ì˜ ê°ì²´ í¬ì¸í„°ë¡œ ë¶€ëª¨ ê°ì²´ëŠ” ê°€ë¦¬í‚¬ ìˆ˜ ì—†ë‹¤.
+	ê·¸ë¦¬ê³  ì ‘ê·¼ì€ ê°ì²´ í¬ì¸í„°ì˜ íƒ€ìž…ì„ ë”°ë¥¸ë‹¤.
 	*/
 	Person* ptr1 = new Student();      //          
 	Person* ptr2 = new PartTimeStudent();
 	Student* ptr3 = new PartTimeStudent();
-	ptr1->Sleep();                         // Æ÷ÀÎÅÍ¸¦ ÅëÇÑ Á¢±ÙÀº arrow¿¬»êÀÚ »ç¿ë
+	ptr1->Sleep();                         // í¬ì¸í„°ë¥¼ í†µí•œ ì ‘ê·¼ì€ arrowì—°ì‚°ìž ì‚¬ìš©
 	ptr2->Sleep();
 	ptr3->Study();
 	delete ptr1; delete ptr2; delete ptr3;

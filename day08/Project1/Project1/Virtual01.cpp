@@ -6,9 +6,9 @@ class Base
 public:
 	Base() {};
 	~Base() {};
-	virtual void func1() { cout << "Base::func1()" << endl; }   // °´Ã¼¸¦ µû¶ó°¨(virtual Å°¿öµå: °´Ã¼ Áß½ÉÀ¸·Î Á¢±ÙÇÔ)
+	virtual void func1() { cout << "Base::func1()" << endl; }   // ê°ì²´ë¥¼ ë”°ë¼ê°(virtual í‚¤ì›Œë“œ: ê°ì²´ ì¤‘ì‹¬ìœ¼ë¡œ ì ‘ê·¼í•¨)
 	virtual void func2() { cout << "Base::func2()" << endl; }
-	 void func3() { cout << "Base::func3()" << endl; }          // Æ÷ÀÎÅÍ¸¦ µû¶ó°¨
+	 void func3() { cout << "Base::func3()" << endl; }          // í¬ì¸í„°ë¥¼ ë”°ë¼ê°
 };
 
 class Derived : public Base
@@ -20,17 +20,17 @@ public:
 };
 int main()
 {
-	Base b;           // Base Å¸ÀÔÀÇ °´Ã¼
-	Derived d;        // Derived Å¸ÀÔÀÇ °´Ã¼º¯¼ö
-	Base* pb = new Derived();    // Base Å¸ÀÔÀÇ °´Ã¼ Æ÷ÀÎÅÍ(* Ç¥½Ã)
+	Base b;           // Base íƒ€ìž…ì˜ ê°ì²´
+	Derived d;        // Derived íƒ€ìž…ì˜ ê°ì²´ë³€ìˆ˜
+	Base* pb = new Derived();    // Base íƒ€ìž…ì˜ ê°ì²´ í¬ì¸í„°(* í‘œì‹œ)
 
-	// virtual »ç¿ëÇÏ¸é Derived::func1(), Base::func2()..
-	pb->func1();      // °´Ã¼ Æ÷ÀÎÅÍ Å¸ÀÔ¸¸ Á¢±ÙµÈ´Ù. Ex. virtual »ç¿ë ¾ÈÇÏ¸é Base::func1().. 
+	// virtual ì‚¬ìš©í•˜ë©´ Derived::func1(), Base::func2()..
+	pb->func1();      // ê°ì²´ í¬ì¸í„° íƒ€ìž…ë§Œ ì ‘ê·¼ëœë‹¤. Ex. virtual ì‚¬ìš© ì•ˆí•˜ë©´ Base::func1()..
 	pb->func2();      
 	pb->func3();
 
 	cout << endl;
-	Derived* pd = &d;     // Derived °´Ã¼ÀÇ ÁÖ¼Ò¸¦ µ¿ÀÏÇÑ Å¸ÀÔÀ¸·Î Áý¾î³Ö°í ÀÖÀ½
+	Derived* pd = &d;     // Derived ê°ì²´ì˜ ì£¼ì†Œë¥¼ ë™ì¼í•œ íƒ€ìž…ìœ¼ë¡œ ì§‘ì–´ë„£ê³  ìžˆìŒ
 	pd->func1();
 	pd->func2();
 	pd->func3();
