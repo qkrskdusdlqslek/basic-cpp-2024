@@ -12,10 +12,10 @@ public:
 
 int main(void)
 {
-	cout << "·¯½Ã¾Æ ¸éÀû: " <<CountryArea::RUSSIA << "km" << endl;
-	cout << "Ä³³ª´Ù ¸éÀû: " << CountryArea::CANADA << "km" << endl;
-	cout << "Áß±¹ ¸éÀû: " << CountryArea::CHINA << "km" << endl;
-	cout << "ÇÑ±¹ ¸éÀû: " << CountryArea::SOUTH_KOREA << "km" << endl;
+	cout << "ëŸ¬ì‹œì•„ ë©´ì : " <<CountryArea::RUSSIA << "km" << endl;
+	cout << "ìºë‚˜ë‹¤ ë©´ì : " << CountryArea::CANADA << "km" << endl;
+	cout << "ì¤‘êµ­ ë©´ì : " << CountryArea::CHINA << "km" << endl;
+	cout << "í•œêµ­ ë©´ì : " << CountryArea::SOUTH_KOREA << "km" << endl;
 
 	return 0;
 }

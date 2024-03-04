@@ -4,12 +4,12 @@ using namespace std;
 class SoSimple
 {
 private:
-	static int simObjCnt;        // ¿ÜºÎ Á¢±Ù Â÷´Ü
+	static int simObjCnt;        // ì™¸ë¶€ ì ‘ê·¼ ì°¨ë‹¨
 public:
 	SoSimple()
 	{
 		simObjCnt++;
-		cout << simObjCnt << "¹øÂ° SoSimple °´Ã¼" << endl;
+		cout << simObjCnt << "ë²ˆì§¸ SoSimple ê°ì²´" << endl;
 	}
 };
 int SoSimple::simObjCnt = 0;          
@@ -22,12 +22,12 @@ public:
 	SoComplex()
 	{
 		cmxObjCnt++;
-		cout << cmxObjCnt << "¹øÂ° SoComplex °´Ã¼" << endl;
+		cout << cmxObjCnt << "ë²ˆì§¸ SoComplex ê°ì²´" << endl;
 	}
 	SoComplex(SoComplex& copy)
 	{
 		cmxObjCnt++;
-		cout << cmxObjCnt << "¹øÂ° SoComplex °´Ã¼" << endl;
+		cout << cmxObjCnt << "ë²ˆì§¸ SoComplex ê°ì²´" << endl;
 	}
 };
 int SoComplex::cmxObjCnt = 0;
@@ -39,7 +39,7 @@ int main(void)
 
 	SoComplex cmx1;
 	SoComplex cmx2 = cmx1;
-	SoComplex();            // ÀÓ½Ã°´Ã¼
+	SoComplex();            // ìž„ì‹œê°ì²´
 
 	return 0;
 }

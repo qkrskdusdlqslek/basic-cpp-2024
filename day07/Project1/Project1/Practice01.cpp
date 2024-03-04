@@ -3,25 +3,25 @@
 #include<cstring>
 using namespace std;
 
-class PersonClass       //class´Â ³»°¡ ¸¸µç ÀÚ·áÇü, ¸Ş¸ğ¸®¸¦ ÇÒ´ç¹ŞÁö ¾Ê´Â´Ù
-{                       // °´Ã¼ »ı¼ºÁß.. ÇÊµå¿Í ¸â¹öÇÔ¼ö´Â °´Ã¼²¨
+class PersonClass       //classëŠ” ë‚´ê°€ ë§Œë“  ìë£Œí˜•, ë©”ëª¨ë¦¬ë¥¼ í• ë‹¹ë°›ì§€ ì•ŠëŠ”ë‹¤
+{                       // ê°ì²´ ìƒì„±ì¤‘.. í•„ë“œì™€ ë©¤ë²„í•¨ìˆ˜ëŠ” ê°ì²´êº¼
 private:
-	char* name;        // name ÇÊµå 
-	int age;           // age ÇÊµå
+	char* name;        // name í•„ë“œ 
+	int age;           // age í•„ë“œ
 
 public:
 	PersonClass(const char* myname, int myage)     
 	{
-		cout << "»ı¼ºÀÚ È£Ãâ" << endl;
+		cout << "ìƒì„±ì í˜¸ì¶œ" << endl;
 		int len = strlen(myname) + 1;
-		name = new char[len];               // 9ÇàÀÇ name
+		name = new char[len];               // 9í–‰ì˜ name
 		strcpy(name, myname);
 		age = myage;
 	}
 
 	PersonClass(const PersonClass& copy) : age(copy.age)
 	{
-		cout << "±íÀº º¹»ç»ı¼ºÀÚ È£Ãâ" << endl;
+		cout << "ê¹Šì€ ë³µì‚¬ìƒì„±ì í˜¸ì¶œ" << endl;
 		this->name = new char[strlen(copy.name) + 1];   
 		strcpy(name, copy.name);                        
 	}
@@ -33,14 +33,14 @@ public:
 
 
 	void PersonInfo() const {
-		cout << "ÀÌ¸§: " << name << endl;
-		cout << "³ªÀÌ: " << age << endl;
+		cout << "ì´ë¦„: " << name << endl;
+		cout << "ë‚˜ì´: " << age << endl;
 	}
 };
 
 int main()
 {
-	PersonClass p("È«±æµ¿", 30);
+	PersonClass p("í™ê¸¸ë™", 30);
 	p.PersonInfo();
 
 	PersonClass copyp(p);

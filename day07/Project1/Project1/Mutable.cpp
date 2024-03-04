@@ -5,18 +5,18 @@ class SoSimple
 {
 private:
 	int num1;
-	mutable int num2;                  // const ÇÔ¼ö¿¡ ´ëÇÑ ¿¹¿Ü¸¦ µĞ´Ù!
+	mutable int num2;                  // const í•¨ìˆ˜ì— ëŒ€í•œ ì˜ˆì™¸ë¥¼ ë‘”ë‹¤!
 public:
-	SoSimple(int n1, int n2)          // »ı¼ºÀÚ
+	SoSimple(int n1, int n2)          // ìƒì„±ì
 		: num1(n1), num2(n2)
 	{ }
-	void ShowSimpleData() const     // ÇÔ¼ö¸¦ constÈ­ ½ÃÅ°¸é ¾È¿¡ ÀÖ´Â °ªÀ» º¯°æX
+	void ShowSimpleData() const     // í•¨ìˆ˜ë¥¼ constí™” ì‹œí‚¤ë©´ ì•ˆì— ìˆëŠ” ê°’ì„ ë³€ê²½X
 	{
 		cout << num1 << ", " << num2 << endl;
 	}
-	void CopyToNum2() const        // °ª º¯°æX
+	void CopyToNum2() const        // ê°’ ë³€ê²½X
 	{
-		num2 = num1;               // num2ÀÇ °ª º¯°æµÇ°í ÀÖÀ½.. -> mutable Å°¿öµå°¡ ÀÖ¾î¼­ °¡´É
+		num2 = num1;               // num2ì˜ ê°’ ë³€ê²½ë˜ê³  ìˆìŒ.. -> mutable í‚¤ì›Œë“œê°€ ìˆì–´ì„œ ê°€ëŠ¥
 	}
 };
 
