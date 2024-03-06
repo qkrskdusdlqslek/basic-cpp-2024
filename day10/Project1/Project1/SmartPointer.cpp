@@ -4,24 +4,24 @@ using namespace std;
 class Point
 {
 private:
-	int xpos, ypos;               // ¸â¹öº¯¼ö 2°³
+	int xpos, ypos;               // ë©¤ë²„ë³€ìˆ˜ 2ê°œ
 public:
 	Point(int x = 0, int y = 0) : xpos(x), ypos(y)
 	{
-		cout << "Point °´Ã¼ »ı¼º" << endl;
+		cout << "Point ê°ì²´ ìƒì„±" << endl;
 	}
 	~Point()
 	{
-		cout << "Point °´Ã¼ ¼Ò¸ê" << endl;
+		cout << "Point ê°ì²´ ì†Œë©¸" << endl;
 	}
 	void SetPos(int x, int y)
 	{
 		xpos = x;
 		ypos = y;
 	}
-	friend ostream& operator<<(ostream& os, const Point& pos);     // °´Ã¼¸¦ Ãâ·ÂÇÏ±â À§ÇØ¼­ ¿¬»êÀÚ ¿À¹ö·Îµù »ç¿ë
+	friend ostream& operator<<(ostream& os, const Point& pos);     // ê°ì²´ë¥¼ ì¶œë ¥í•˜ê¸° ìœ„í•´ì„œ ì—°ì‚°ì ì˜¤ë²„ë¡œë”© ì‚¬ìš©
 };
-ostream& operator<<(ostream& os, const Point& pos)  // Æ÷ÀÎÅÍ Å¸ÀÔ¿¡ ÀÖ´Â ¸â¹öº¯¼öµéÀ» Ãâ·Â
+ostream& operator<<(ostream& os, const Point& pos)  // í¬ì¸í„° íƒ€ì…ì— ìˆëŠ” ë©¤ë²„ë³€ìˆ˜ë“¤ì„ ì¶œë ¥
 {
 	os << '[' << pos.xpos << "," << pos.ypos << ']' << endl;
 	return os;
@@ -30,29 +30,29 @@ ostream& operator<<(ostream& os, const Point& pos)  // Æ÷ÀÎÅÍ Å¸ÀÔ¿¡ ÀÖ´Â ¸â¹öº¯
 class SmartPtr
 {
 private:
-	Point* posptr;         // PointÅ¸ÀÔÀÇ Æ÷ÀÎÅÍ º¯¼ö
+	Point* posptr;         // Pointíƒ€ì…ì˜ í¬ì¸í„° ë³€ìˆ˜
 public:
 	SmartPtr(Point * ptr) : posptr(ptr)
 	{ }
 
 	Point& operator*() const
 	{
-		return *posptr;       // ÇÊµå °ª(Æ÷ÀÎÅÍ º¯¼ö)ÀÇ µ¥ÀÌÅÍ¸¦ Àü´Ş -> PointÅ¸ÀÔÀÇ °´Ã¼¸¦ ¸®ÅÏ
+		return *posptr;       // í•„ë“œ ê°’(í¬ì¸í„° ë³€ìˆ˜)ì˜ ë°ì´í„°ë¥¼ ì „ë‹¬ -> Pointíƒ€ì…ì˜ ê°ì²´ë¥¼ ë¦¬í„´
 	}
 	Point* operator->() const
 	{
-		return posptr;         // Æ÷ÀÎÅÍ °´Ã¼¸¦ ¸®ÅÏ
+		return posptr;         // í¬ì¸í„° ê°ì²´ë¥¼ ë¦¬í„´
 	}
 	~SmartPtr()
 	{
-		printf("SmartPtr °´Ã¼ ¼Ò¸ê\n");
+		printf("SmartPtr ê°ì²´ ì†Œë©¸\n");
 		delete posptr;
 	}
 };
 
 int main(void)
 {
-	SmartPtr sptr1(new Point(1, 2));        // Èü¿µ¿ª¿¡ »ı¼º
+	SmartPtr sptr1(new Point(1, 2));        // í™ì˜ì—­ì— ìƒì„±
 	SmartPtr sptr2(new Point(2, 3));
 	SmartPtr sptr3(new Point(4, 5));
 	cout << *sptr1;

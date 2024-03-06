@@ -10,12 +10,12 @@ private:
 public:
 	BoundCheckIntArray(int len) : arrlen(len)
 	{
-		printf("»ı¼ºÀÚ È£Ãâ\n");
-		arr = new int[len];      // »õ·Ó°Ô ¹è¿­ Å¸ÀÔÀ¸·Î intÇü Àü´Ş¹ŞÀº Å©±â¸¸Å­ ÁÖ¼Ò°ªÀ» ¸®ÅÏÇØ¼­ ¹Ş°í ÀÖ´Ù.
+		printf("ìƒì„±ì í˜¸ì¶œ\n");
+		arr = new int[len];      // ìƒˆë¡­ê²Œ ë°°ì—´ íƒ€ì…ìœ¼ë¡œ intí˜• ì „ë‹¬ë°›ì€ í¬ê¸°ë§Œí¼ ì£¼ì†Œê°’ì„ ë¦¬í„´í•´ì„œ ë°›ê³  ìˆë‹¤.
 	}
 	int& operator[] (int idx)
 	{
-		printf("[]¿¬»êÀÚÇÔ¼ö È£Ãâ\n");
+		printf("[]ì—°ì‚°ìí•¨ìˆ˜ í˜¸ì¶œ\n");
 		if (idx<0 || idx>=arrlen)
 		{
 			cout << "Array index out of bound exception" << endl;
@@ -26,7 +26,7 @@ public:
 	}
 	~BoundCheckIntArray()
 	{
-		printf("¼Ò¸êÀÚ È£Ãâ=\n");
+		printf("ì†Œë©¸ì í˜¸ì¶œ=\n");
 		delete []arr;
 	}
 };
@@ -34,10 +34,10 @@ public:
 int main(void)
 {
 	BoundCheckIntArray arr(5);          
-	for (int i = 0; i < 5; i++)      // 0¹ø¹æºÎÅÍ 4¹ø¹æ±îÁö ÃÑ 5°³ ¹æ
+	for (int i = 0; i < 5; i++)      // 0ë²ˆë°©ë¶€í„° 4ë²ˆë°©ê¹Œì§€ ì´ 5ê°œ ë°©
 		arr[i] = (i + 1) * 11;
 
-	for (int i = 0; i < 6; i++)      // 6¹ø ½ÇÇà µÊ
+	for (int i = 0; i < 6; i++)      // 6ë²ˆ ì‹¤í–‰ ë¨
 		cout << arr[i] << endl;      
 
 	return 0;

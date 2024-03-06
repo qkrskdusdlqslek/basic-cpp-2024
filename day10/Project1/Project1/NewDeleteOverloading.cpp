@@ -9,15 +9,15 @@ public:
 	Point(int x=0, int y=0) : xpos(x), ypos(y) { }
 	friend ostream& operator<<(ostream& os, const Point& pos);
 
-	void* operator new (size_t size)                 // ÄÄÆÄÀÏ·¯°¡ ÀÚµ¿À¸·Î Å©±â¸¦ ÇÒ´ç½ÃÄÑ ÁÜ
+	void* operator new (size_t size)                 // ì»´íŒŒì¼ëŸ¬ê°€ ìžë™ìœ¼ë¡œ í¬ê¸°ë¥¼ í• ë‹¹ì‹œì¼œ ì¤Œ
 	{                                 
 		cout << "operator new: " << size << endl;
-		void* adr = new char[size];            // »ý¼ºÀÚ È£Ãâ, 34¹øÀÇ ptr ÁÖ¼Ò°¡ adr¿¡ µé¾î°¡ ÀÖÀ½
-		return adr;                            // ¸Þ¸ð¸® °ø°£ ÇÒ´ç ¹Þ´Â´Ù
+		void* adr = new char[size];            // ìƒì„±ìž í˜¸ì¶œ, 34ë²ˆì˜ ptr ì£¼ì†Œê°€ adrì— ë“¤ì–´ê°€ ìžˆìŒ
+		return adr;                            // ë©”ëª¨ë¦¬ ê³µê°„ í• ë‹¹ ë°›ëŠ”ë‹¤
 	}
-	void operator delete (void* adr)           // delete ¿À¹ö·Îµù
+	void operator delete (void* adr)           // delete ì˜¤ë²„ë¡œë”©
 	{
-		cout << "operator delete ()" << endl;       // new ¿¬»êÀÚ°¡ ½ÇÇàµÇ¸é Ãâ·Â
+		cout << "operator delete ()" << endl;       // new ì—°ì‚°ìžê°€ ì‹¤í–‰ë˜ë©´ ì¶œë ¥
 		delete[]adr;
 	}
 };
@@ -30,10 +30,10 @@ ostream& operator<<(ostream& os, const Point& pos)
 
 int main(void)
 {
-	Point* ptr = new Point(3, 4);      // new ¿¬»êÀÚ¸¦ ÅëÇØ¼­ °´Ã¼¸¦ »ý¼ºÇÏ¸é 12¹øÀÌ ½ÇÇàµÊ
+	Point* ptr = new Point(3, 4);      // new ì—°ì‚°ìžë¥¼ í†µí•´ì„œ ê°ì²´ë¥¼ ìƒì„±í•˜ë©´ 12ë²ˆì´ ì‹¤í–‰ë¨
 	cout << *ptr;
 	delete ptr;
 
 	return 0;
 }
-// Å©±â ¸ÕÀú ÇÒ´ç ¹Þ°í »ý¼ºÀÚ È£ÃâÀ» ÇÔ
+// í¬ê¸° ë¨¼ì € í• ë‹¹ ë°›ê³  ìƒì„±ìž í˜¸ì¶œì„ í•¨

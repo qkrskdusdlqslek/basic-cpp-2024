@@ -6,12 +6,12 @@ class MyClass
 public:
 	MyClass(int* p) : ptr(new int[100])
 		{
-			printf("»ı¼ºÀÚ È£Ãâ\n");
+			printf("ìƒì„±ì í˜¸ì¶œ\n");
 		}
 
 	~MyClass()
 		{
-				printf("¼Ò¸êÀÚ È£Ãâ\n");
+				printf("ì†Œë©¸ì í˜¸ì¶œ\n");
 			delete[] ptr;
 		}
 };

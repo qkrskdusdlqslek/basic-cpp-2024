@@ -26,7 +26,7 @@ class Adder
 public:
 	int operator()(const int& n1, const int& n2)
 	{
-		return n1 + n2;        // Á¤¼ö+Á¤¼ö -> ±âº»ÀûÀ¸·Î ±¸Çö °¡´É
+		return n1 + n2;        // ì •ìˆ˜+ì •ìˆ˜ -> ê¸°ë³¸ì ìœ¼ë¡œ êµ¬í˜„ ê°€ëŠ¥
 	}
 	double operator()(const double& e1, const double& e2)
 	{
@@ -34,14 +34,14 @@ public:
 	}
 	Point operator()(const Point& pos1, const Point& pos2)
 	{
-		return pos1 + pos2;      // Æ÷ÀÎÅÍ °´Ã¼ ´õÇÏ±â´Â ¿¬»êÀÚ ¿À¹ö·Îµù »ç¿ëÇØ¾ß ÇÔ(13¹ø)
+		return pos1 + pos2;      // í¬ì¸í„° ê°ì²´ ë”í•˜ê¸°ëŠ” ì—°ì‚°ì ì˜¤ë²„ë¡œë”© ì‚¬ìš©í•´ì•¼ í•¨(13ë²ˆ)
 	}
 };
 
 int main(void)
 {
-	Adder adder;                      // AdderÅ¸ÀÔ¿¡ adder »ı¼º
-	cout << adder(1, 3) << endl;      // °´Ã¼¸¦ ÇÔ¼öÈ­ , ¿¬»êÀÚ ¿À¹ö·Îµù(18-22¹ø) -> ÇÔ¼öÃ³·³ µ¿ÀÛÇÏ´Â Å¬·¡½º
+	Adder adder;                      // Adderíƒ€ì…ì— adder ìƒì„±
+	cout << adder(1, 3) << endl;      // ê°ì²´ë¥¼ í•¨ìˆ˜í™” , ì—°ì‚°ì ì˜¤ë²„ë¡œë”©(18-22ë²ˆ) -> í•¨ìˆ˜ì²˜ëŸ¼ ë™ì‘í•˜ëŠ” í´ë˜ìŠ¤
 	cout << adder(1.5, 3.7) << endl;
 	cout << adder(Point(3, 4), Point(7, 9));
 

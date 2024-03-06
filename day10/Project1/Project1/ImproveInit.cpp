@@ -6,15 +6,15 @@ class AAA
 private: 
 	int num;
 public:
-	AAA(int n = 0) : num(n)                              // Á¤¼ö ÇÏ³ª¸¦ ÀÔ·ÂÀ¸·Î °®´Â »ı¼ºÀÚ
+	AAA(int n = 0) : num(n)                              // ì •ìˆ˜ í•˜ë‚˜ë¥¼ ì…ë ¥ìœ¼ë¡œ ê°–ëŠ” ìƒì„±ì
 	{
 		cout << "AAA(int n=0)" << endl;
 	}
-	AAA(const AAA& ref) : num(ref.num)                  // °´Ã¼ ÇÏ³ª¸¦ ÀÔ·ÂÀ¸·Î °®´Â »ı¼ºÀÚ
+	AAA(const AAA& ref) : num(ref.num)                  // ê°ì²´ í•˜ë‚˜ë¥¼ ì…ë ¥ìœ¼ë¡œ ê°–ëŠ” ìƒì„±ì
 	{
 		cout << "AAA(const AAA &ref)" << endl;
 	}
-	AAA& operator=(const AAA& ref)                     // ´ëÀÔ¿¬»êÀÚ ¿À¹ö·Îµù
+	AAA& operator=(const AAA& ref)                     // ëŒ€ì…ì—°ì‚°ì ì˜¤ë²„ë¡œë”©
 	{
 		num = ref.num;
 		cout << "operator=(const AAA &ref)" << endl;
@@ -25,9 +25,9 @@ public:
 class BBB
 {
 private:
-	AAA mem;                                 // AAAÅ¸ÀÔÀÇ °´Ã¼
+	AAA mem;                                 // AAAíƒ€ì…ì˜ ê°ì²´
 public:
-	BBB(const AAA &ref) : mem(ref) { }       // ¸â¹ö ÀÌ´Ï¼È¶óÀÌÀú(Äİ·Ğ ÃÊ±âÈ­)¸¦ ÅëÇØ¼­ ÃÊ±âÈ­
+	BBB(const AAA &ref) : mem(ref) { }       // ë©¤ë²„ ì´ë‹ˆì…œë¼ì´ì €(ì½œë¡  ì´ˆê¸°í™”)ë¥¼ í†µí•´ì„œ ì´ˆê¸°í™”
 };
 
 class CCC
@@ -35,7 +35,7 @@ class CCC
 private:
 	AAA mem;
 public:
-	CCC(const AAA& ref) { mem = ref; }               // ´ëÀÔ¿¬»êÀ» ÅëÇØ¼­ ÃÊ±âÈ­
+	CCC(const AAA& ref) { mem = ref; }               // ëŒ€ì…ì—°ì‚°ì„ í†µí•´ì„œ ì´ˆê¸°í™”
 };
 
 int main(void)

@@ -1,5 +1,5 @@
 /*
-  5¸íÀÇ ÀÌ¸§°ú ±¹,¿µ,¼ö 3°ú¸ñÀ» ÀÔ·Â¹Ş¾Æ ÇĞ»ıº° ÃÑÁ¡°ú Æò±Õ, ±×¸®°í °ú¸ñº° ÃÑÁ¡°ú Æò±Õ ±¸ÇÏ±â
+  5ëª…ì˜ ì´ë¦„ê³¼ êµ­,ì˜,ìˆ˜ 3ê³¼ëª©ì„ ì…ë ¥ë°›ì•„ í•™ìƒë³„ ì´ì ê³¼ í‰ê· , ê·¸ë¦¬ê³  ê³¼ëª©ë³„ ì´ì ê³¼ í‰ê·  êµ¬í•˜ê¸°
 */
 #define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
@@ -23,10 +23,10 @@ public:
 	}
 	void ShowData() const
 	{
-		cout << "ÀÌ¸§: " << name << endl;
-		cout << "±¹¾îÁ¡¼ö: " << kr << endl;
-		cout << "¼öÇĞÁ¡¼ö: " << math << endl;
-		cout << "¿µ¾îÁ¡¼ö: " << english << endl;
+		cout << "ì´ë¦„: " << name << endl;
+		cout << "êµ­ì–´ì ìˆ˜: " << kr << endl;
+		cout << "ìˆ˜í•™ì ìˆ˜: " << math << endl;
+		cout << "ì˜ì–´ì ìˆ˜: " << english << endl;
 	}
 	class Add
 	{
@@ -48,19 +48,19 @@ public:
 	int main(void)
 	{
 		string name;
-		cout << "ÀÌ¸§À» ÀÔ·ÂÇÏ¼¼¿ä: " << endl;
+		cout << "ì´ë¦„ì„ ì…ë ¥í•˜ì„¸ìš”: " << endl;
 		cin >> name;
 
 		string kr;
-		cout << "±¹¾î Á¡¼ö: " << endl;
+		cout << "êµ­ì–´ ì ìˆ˜: " << endl;
 		cin >> kr;
 		
 		string math;
-		cout << "¼öÇĞ Á¡¼ö: " << endl;
+		cout << "ìˆ˜í•™ ì ìˆ˜: " << endl;
 		cin >> math;
 
 		string english;
-		cout << "¿µ¾î Á¡¼ö: " << endl;
+		cout << "ì˜ì–´ ì ìˆ˜: " << endl;
 		cin >> english;
 	
 		return 0;
