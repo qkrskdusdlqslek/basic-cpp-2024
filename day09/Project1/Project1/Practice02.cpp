@@ -12,11 +12,25 @@ public:
 	{
 		cout << '[' << a << "," << b << ']' << endl;
 	}
-	Point operator+(const Point& num)
+	Point operator+(const Point& other)
 	{
-		Point pos(a + num.a, b + num.b);
+		Point pos(a + other.a, b + other.b);
 		return pos;
 	 }
+	// 덧셈 연산자 오버로딩: Point 객체와 정수를 더한 결과를 반환
+	friend Point operator+(const int& num, const Point& other)
+	{
+		return Point(num + other.a, num + other.b);
+	}
+	/*friend Point operator+(const Point& other, const int& num)
+	{
+		return num + other;
+	}*/
+	// 출력 연산자 오버로딩: Point 객체의 좌표를 출력
+	friend ostream& operator<<(ostream& os, const Point& other) {
+		os << "(" << other.a << ", " << other.b << ")"; // 현재 Point 객체의 좌표 출력
+		return os;
+	}
 };
 
 int main()
