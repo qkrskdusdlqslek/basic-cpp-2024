@@ -1,5 +1,5 @@
 /*
-  °´Ã¼¸¦ ´õÇÏ´Â add ¸â¹öÇÔ¼ö
+  ê°ì²´ë¥¼ ë”í•˜ëŠ” add ë©¤ë²„í•¨ìˆ˜
 */
 #include <iostream>
 using namespace std;
@@ -12,7 +12,7 @@ public:
 	{
 		cout << "Operator" << endl;
 	}
-	Point add(const Point& other)      // ¸â¹öÇÔ¼ö add
+	Point add(const Point& other)      // ë©¤ë²„í•¨ìˆ˜ add
 	{
 		return Point(x + other.x, y + other.y);
 	}

@@ -19,8 +19,8 @@ public:
 
 	Person& operator=(const Person& ref)
 	{
-		delete[]name;      // ¸Ş¸ğ¸®ÀÇ ´©¼ö¸¦ ¸·±â À§ÇÑ ¸Ş¸ğ¸® ÇØÁ¦ ¿¬»ê
-		                  // ±âÁ¸ man2°¡ °¡¸®Å°´ø "Yoon ji yul"ÀÇ Èü ¿µ¿ª ¸Ş¸ğ¸® °ø°£À» ¹İÈ¯ÇÑ´Ù.
+		delete[]name;      // ë©”ëª¨ë¦¬ì˜ ëˆ„ìˆ˜ë¥¼ ë§‰ê¸° ìœ„í•œ ë©”ëª¨ë¦¬ í•´ì œ ì—°ì‚°
+		                  // ê¸°ì¡´ man2ê°€ ê°€ë¦¬í‚¤ë˜ "Yoon ji yul"ì˜ í™ ì˜ì—­ ë©”ëª¨ë¦¬ ê³µê°„ì„ ë°˜í™˜í•œë‹¤.
 		int len = strlen(ref.name) + 1;
 		name = new char[len];
 		strcpy(name, ref.name);
@@ -30,8 +30,8 @@ public:
 
 	void ShowPersonInfo() const
 	{
-		cout << "ÀÌ¸§: " << name << endl;
-		cout << "³ªÀÌ: " << age << endl;
+		cout << "ì´ë¦„: " << name << endl;
+		cout << "ë‚˜ì´: " << age << endl;
 	}
 	~Person()
 	{

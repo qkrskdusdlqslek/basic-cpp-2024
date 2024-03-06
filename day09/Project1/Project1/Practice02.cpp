@@ -17,7 +17,7 @@ public:
 		Point pos(a + other.a, b + other.b);
 		return pos;
 	 }
-	// µ¡¼À ¿¬»êÀÚ ¿À¹ö·Îµù: Point °´Ã¼¿Í Á¤¼ö¸¦ ´õÇÑ °á°ú¸¦ ¹İÈ¯
+	// ë§ì…ˆ ì—°ì‚°ì ì˜¤ë²„ë¡œë”©: Point ê°ì²´ì™€ ì •ìˆ˜ë¥¼ ë”í•œ ê²°ê³¼ë¥¼ ë°˜í™˜
 	friend Point operator+(const int& num, const Point& other)
 	{
 		return Point(num + other.a, num + other.b);
@@ -26,9 +26,9 @@ public:
 	{
 		return num + other;
 	}*/
-	// Ãâ·Â ¿¬»êÀÚ ¿À¹ö·Îµù: Point °´Ã¼ÀÇ ÁÂÇ¥¸¦ Ãâ·Â
+	// ì¶œë ¥ ì—°ì‚°ì ì˜¤ë²„ë¡œë”©: Point ê°ì²´ì˜ ì¢Œí‘œë¥¼ ì¶œë ¥
 	friend ostream& operator<<(ostream& os, const Point& other) {
-		os << "(" << other.a << ", " << other.b << ")"; // ÇöÀç Point °´Ã¼ÀÇ ÁÂÇ¥ Ãâ·Â
+		os << "(" << other.a << ", " << other.b << ")"; // í˜„ì¬ Point ê°ì²´ì˜ ì¢Œí‘œ ì¶œë ¥
 		return os;
 	}
 };

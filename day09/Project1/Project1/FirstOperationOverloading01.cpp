@@ -20,7 +20,7 @@ public:
 	{ }
 	void ShowData() { cout << num3 << "," << num4 << endl; }
 
-	Second& operator=(const Second& ref)           // ´ëÀÔ¿¬»êÀÚ ¿À¹ö·Îµù..
+	Second& operator=(const Second& ref)           // ëŒ€ìž…ì—°ì‚°ìž ì˜¤ë²„ë¡œë”©..
 	{
 		cout << "Secondd& operator=()" << endl;
 		num3 = ref.num3;
@@ -35,8 +35,8 @@ int main(void)
 	First fcpy;
 	Second ssrc(333, 444);
 	Second scpy;
-	fcpy = fsrc;               // µðÆúÆ® ´ëÀÔ¿¬»êÀÚ È£Ãâ(¸â¹ö´ë ¸â¹ö ´ëÀÔ) ; µðÆúÆ® º¹»ç»ý¼ºÀÚ¿Í ºñ½ÁÇÏ´Ù.
-	scpy = ssrc;               // ¸í½ÃÀûÀ¸·Î ÀÛ¼ºÇÑ ´ëÀÔ¿¬»êÀÚ È£Ãâ
+	fcpy = fsrc;               // ë””í´íŠ¸ ëŒ€ìž…ì—°ì‚°ìž í˜¸ì¶œ(ë©¤ë²„ëŒ€ ë©¤ë²„ ëŒ€ìž…) ; ë””í´íŠ¸ ë³µì‚¬ìƒì„±ìžì™€ ë¹„ìŠ·í•˜ë‹¤.
+	scpy = ssrc;               // ëª…ì‹œì ìœ¼ë¡œ ìž‘ì„±í•œ ëŒ€ìž…ì—°ì‚°ìž í˜¸ì¶œ
 	fcpy.ShowData();
 	scpy.ShowData();
 

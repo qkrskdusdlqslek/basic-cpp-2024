@@ -24,7 +24,7 @@ int main(void)
 	Point pos(1, 2);
 	Point cpy;
 
-	cpy = pos * 3;        // pos´Â Æ÷ÀÎÅÍ 3Àº int Å¸ÀÔ(´Ù¸¥ Å¸ÀÔÀÇ °öÇÏ±â ¿¬»êÀº ¿ø·¡ Áö¿øÀÌ ¾ÈµÊ)
+	cpy = pos * 3;        // posëŠ” í¬ì¸í„° 3ì€ int íƒ€ìž…(ë‹¤ë¥¸ íƒ€ìž…ì˜ ê³±í•˜ê¸° ì—°ì‚°ì€ ì›ëž˜ ì§€ì›ì´ ì•ˆë¨)
 	cpy.ShowPosition();
 
 	cpy = pos * 3 * 2;

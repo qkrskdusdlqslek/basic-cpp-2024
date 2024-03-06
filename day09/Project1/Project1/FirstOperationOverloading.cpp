@@ -4,18 +4,18 @@ using namespace std;
 class Point
 {
 private:
-	int xpos, ypos;             // µ¿ÀÏÇÑ Å¸ÀÔÀÌ±â ¶§¹®¿¡ ½°Ç¥ »ç¿ëÇØ¼­ ÀÛ¼º °¡´É
+	int xpos, ypos;             // ë™ì¼í•œ íƒ€ìž…ì´ê¸° ë•Œë¬¸ì— ì‰¼í‘œ ì‚¬ìš©í•´ì„œ ìž‘ì„± ê°€ëŠ¥
 public:
-	Point(int x=0, int y=0) : xpos(x), ypos(y)      // int x=0 : µðÆúÆ® °ª , µðÆúÆ® ÃÊ±â°ªÀº ÀÔ·ÂÀÌ Àü´Þ ¾ÈµÇ¸é µðÆúÆ®°ªÀ¸·Î ÃÊ±âÈ­
+	Point(int x=0, int y=0) : xpos(x), ypos(y)      // int x=0 : ë””í´íŠ¸ ê°’ , ë””í´íŠ¸ ì´ˆê¸°ê°’ì€ ìž…ë ¥ì´ ì „ë‹¬ ì•ˆë˜ë©´ ë””í´íŠ¸ê°’ìœ¼ë¡œ ì´ˆê¸°í™”
 	{ }
-	void ShowPosition() const       // »ó¼öÈ­(cosnt): º¯°æ ÇÏ¸é ¾ÈµÇ´Â °ª¿¡ »ç¿ë!
+	void ShowPosition() const       // ìƒìˆ˜í™”(cosnt): ë³€ê²½ í•˜ë©´ ì•ˆë˜ëŠ” ê°’ì— ì‚¬ìš©!
 	{
 		cout << '[' << xpos << "," << ypos << ']' << endl;
 	}
-	Point operator+(const Point& ref)      // ÇÔ¼öÀÇ Á¤ÀÇ ºÎºÐ, operator+¶ó´Â ÀÌ¸§ÀÇ ÇÔ¼ö, Ãâ·Â+ÀÌ¸§+(ÇÔ¼ö)
-   // µÎ°³ÀÇ °´Ã¼¿¡ ¼Ó¼º°ªÀ» ´õÇØ¼­ »ý¼º (¿ì¸®°¡ ¸¸µç ÀÚ·áÇü¿¡ ´õÇÏ±â¸¦ ÇÏ±â À§ÇØ¼­ ¿¬»êÀÚ ¿À¹ö·ÎµùÀ» »ç¿ë)
+	Point operator+(const Point& ref)      // í•¨ìˆ˜ì˜ ì •ì˜ ë¶€ë¶„, operator+ë¼ëŠ” ì´ë¦„ì˜ í•¨ìˆ˜, ì¶œë ¥+ì´ë¦„+(í•¨ìˆ˜)
+   // ë‘ê°œì˜ ê°ì²´ì— ì†ì„±ê°’ì„ ë”í•´ì„œ ìƒì„± (ìš°ë¦¬ê°€ ë§Œë“  ìžë£Œí˜•ì— ë”í•˜ê¸°ë¥¼ í•˜ê¸° ìœ„í•´ì„œ ì—°ì‚°ìž ì˜¤ë²„ë¡œë”©ì„ ì‚¬ìš©)
 	{
-		Point pos(xpos + ref.xpos, ypos + ref.ypos);    // »õ·Î¿î °´Ã¼ »ý¼º(24¹øÀÌ¶û µ¿ÀÏÇÑ ÄÚµå)
+		Point pos(xpos + ref.xpos, ypos + ref.ypos);    // ìƒˆë¡œìš´ ê°ì²´ ìƒì„±(24ë²ˆì´ëž‘ ë™ì¼í•œ ì½”ë“œ)
 		return pos;
 	}
 };
@@ -24,7 +24,7 @@ int main(void)
 {
 	Point pos1(3, 4);     
 	Point pos2(10, 20);
-	Point pos3 = pos1.operator+(pos2);    // ´ëÀÔ¿¬»êÀÚ¸¦ ÅëÇØ ¸â¹öÇÔ¼ö ¿À¹ö·Îµù ÇÏ´Â ¹®¹ý!
+	Point pos3 = pos1.operator+(pos2);    // ëŒ€ìž…ì—°ì‚°ìžë¥¼ í†µí•´ ë©¤ë²„í•¨ìˆ˜ ì˜¤ë²„ë¡œë”© í•˜ëŠ” ë¬¸ë²•!
 	Point pos4 = pos2.operator+(pos3);
 
 	pos1.ShowPosition();

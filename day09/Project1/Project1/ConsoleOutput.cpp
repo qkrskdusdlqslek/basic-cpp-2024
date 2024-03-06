@@ -18,11 +18,11 @@ namespace mystd
 		{
 			printf("%d", num);
 		}
-		void operator<< (double e)     // ½Ç¼ö ÇüÅÂ
+		void operator<< (double e)     // ì‹¤ìˆ˜ í˜•íƒœ
 		{
 			printf("%g", e);
 		}
-		void operator<< (ostream& (*fp)(ostream& ostm))    //(*fp): ÇÔ¼ö ÀÌ¸§À» ³ªÅ¸³»´Â Æ÷ÀÎÅÍ
+		void operator<< (ostream& (*fp)(ostream& ostm))    //(*fp): í•¨ìˆ˜ ì´ë¦„ì„ ë‚˜íƒ€ë‚´ëŠ” í¬ì¸í„°
 		{
 			fp(*this);
 		}

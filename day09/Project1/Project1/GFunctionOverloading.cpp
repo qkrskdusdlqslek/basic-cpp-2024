@@ -12,8 +12,8 @@ public:
 	{
 		cout << '[' << xpos << "," << ypos << ']' << endl;
 	}
-	friend Point operator+ (const Point & pos1, const Point & pos2);   // 18-22±îÁö friend·Î ¼±¾ğÇÔ(friend´Â °¡±ŞÀû »ç¿ëX)
-	                                                                   // friend¸¦ »ç¿ëÇÏÁö ¾ÊÀ¸·Á¸é getÀ» »ç¿ë..
+	friend Point operator+ (const Point & pos1, const Point & pos2);   // 18-22ê¹Œì§€ friendë¡œ ì„ ì–¸í•¨(friendëŠ” ê°€ê¸‰ì  ì‚¬ìš©X)
+	                                                                   // friendë¥¼ ì‚¬ìš©í•˜ì§€ ì•Šìœ¼ë ¤ë©´ getì„ ì‚¬ìš©..
 };
 
 Point operator+(const Point& pos1, const Point& pos2)
@@ -26,7 +26,7 @@ int main(void)
 {
 	Point pos1(3, 4);
 	Point pos2(10, 20);
-	Point pos3 = pos1 + pos2;     // 18¹øÀÌ ½ÇÇàµÊ
+	Point pos3 = pos1 + pos2;     // 18ë²ˆì´ ì‹¤í–‰ë¨
 
 	pos1.ShowPosition();
 	pos2.ShowPosition();

@@ -12,36 +12,36 @@ public:
 	{
 		cout << '[' << xpos << "," << ypos << ']' << endl;
 	}
-	Point& operator++()       // ÀüÀ§Áõ°¡ÇÏ°í ´øÁ®ÁØ´Ù.  a = ++i 
+	Point& operator++()       // ì „ìœ„ì¦ê°€í•˜ê³  ë˜ì ¸ì¤€ë‹¤.  a = ++i 
 	{
 		xpos += 1;
 		ypos += 1;
 		return *this;
 	}
-	const Point operator++(int)       // ´øÁ®ÁÖ°í ÈÄÀ§Áõ°¡    a = i++
-		// 1. ÇöÀçÀÇ °´Ã¼¸¦ º¹»çÇÏ¿© ÇöÀçÀÇ ¼Ó¼º°ªÀ» À¯Áö½ÃÅ²´Ù.
+	const Point operator++(int)       // ë˜ì ¸ì£¼ê³  í›„ìœ„ì¦ê°€    a = i++
+		// 1. í˜„ì¬ì˜ ê°ì²´ë¥¼ ë³µì‚¬í•˜ì—¬ í˜„ì¬ì˜ ì†ì„±ê°’ì„ ìœ ì§€ì‹œí‚¨ë‹¤.
 	{
 		const Point retobj(xpos, ypos);        // const Point retobj(*this);
-		// 2. ÇöÀç °´Ã¼ÀÇ ¼Ó¼º°ªÀ» 1¾¿ Áõ°¡½ÃÅ²´Ù.
+		// 2. í˜„ì¬ ê°ì²´ì˜ ì†ì„±ê°’ì„ 1ì”© ì¦ê°€ì‹œí‚¨ë‹¤.
 		xpos += 1;
 		ypos += 1;
-		// 3. Áõ°¡ ÀÌÀü¿¡ º¹»çÇÑ °´Ã¼¸¦ Àü´ŞÇÑ´Ù.
+		// 3. ì¦ê°€ ì´ì „ì— ë³µì‚¬í•œ ê°ì²´ë¥¼ ì „ë‹¬í•œë‹¤.
 		return retobj;
 	}
 	friend Point& operator--(Point& ref);
 	friend const Point operator--(Point& ref, int);
 };
 
-Point& operator--(Point& ref)       // ÀüÀ§°¨¼Ò
+Point& operator--(Point& ref)       // ì „ìœ„ê°ì†Œ
 {
 	ref.xpos -= 1;
 	ref.ypos -= 1;
 	return ref;
 }
 
-const Point operator--(Point& ref, int)     // ÈÄÀ§°¨¼Ò
+const Point operator--(Point& ref, int)     // í›„ìœ„ê°ì†Œ
 {
-	const Point retobj(ref);         // const °´Ã¼¶ó ÇÑ´Ù.
+	const Point retobj(ref);         // const ê°ì²´ë¼ í•œë‹¤.
 	ref.xpos -= 1;
 	ref.ypos -= 1;
 	return retobj;

@@ -12,7 +12,7 @@ public:
 	{
 		cout << '[' << xpos << "," << ypos << ']' << endl;
 	}
-	Point operator*(int times)    // Á¤¼ö ÇüÅÂ ÀÔ·Â
+	Point operator*(int times)    // ì •ìˆ˜ í˜•íƒœ ì…ë ¥
 	{
 		Point pos(xpos * times, ypos * times);
 		return pos;
@@ -20,9 +20,9 @@ public:
 	friend Point operator*(int times, Point& ref);
 };
 
-Point operator*(int times, Point& ref)     // Á¤¼ö¸¦ Ã¹¹øÂ° ¸Å°³º¯¼ö·Î ¹Ş°í
+Point operator*(int times, Point& ref)     // ì •ìˆ˜ë¥¼ ì²«ë²ˆì§¸ ë§¤ê°œë³€ìˆ˜ë¡œ ë°›ê³ 
 {
-	return ref * times;         // 16-19¹ø ½ÇÇàµÊ, = return ref.operator*(times);
+	return ref * times;         // 16-19ë²ˆ ì‹¤í–‰ë¨, = return ref.operator*(times);
 }
 
 int main(void)

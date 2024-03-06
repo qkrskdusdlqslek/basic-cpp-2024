@@ -13,7 +13,7 @@ public:
 	}
 	Myclass operator+(const Myclass& num)
 	{
-		Myclass pos(a + num.a);            // »õ·Î¿î °´Ã¼ »ý¼º
+		Myclass pos(a + num.a);            // è´§è‚ºæ¬¾ æŒ‰çœ‰ ç§¯å·±
 		return pos;             
 	}
 };
