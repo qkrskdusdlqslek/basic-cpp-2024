@@ -16,6 +16,18 @@ public:
 		strcpy(name, myname);
 		age = myage;
 	}
+
+	Person& operator=(const Person& ref)
+	{
+		delete[]name;      // 메모리의 누수를 막기 위한 메모리 해제 연산
+		                  // 기존 man2가 가리키던 "Yoon ji yul"의 힙 영역 메모리 공간을 반환한다.
+		int len = strlen(ref.name) + 1;
+		name = new char[len];
+		strcpy(name, ref.name);
+		age = ref.age;
+		return *this;
+	}
+
 	void ShowPersonInfo() const
 	{
 		cout << "이름: " << name << endl;
