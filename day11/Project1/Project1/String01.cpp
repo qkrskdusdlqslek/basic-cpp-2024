@@ -1,6 +1,6 @@
 /*
-  C-Style ¹®ÀÚ¿­ 
-  ¹®ÀÚ¿­Àº ¸¶Áö¸·¿¡ ³Î¹®ÀÚ°¡ ºÙ´Â´Ù.
+  C-Style ë¬¸ìžì—´ 
+  ë¬¸ìžì—´ì€ ë§ˆì§€ë§‰ì— ë„ë¬¸ìžê°€ ë¶™ëŠ”ë‹¤.
 */
 #include <iostream>
 #include <string>
@@ -12,38 +12,38 @@ int main()
 	cout << code << endl;
 	cout << (char)code << endl;    // = a
 	cout << "================================" << endl;
-	char ary[6] = { 'a', 'b', 'c', 'd', 'e' };      // ¹®ÀÚ¿­ Å¸ÀÔÀÇ ¹è¿­ ¼±¾ð
+	char ary[6] = { 'a', 'b', 'c', 'd', 'e' };      // ë¬¸ìžì—´ íƒ€ìž…ì˜ ë°°ì—´ ì„ ì–¸
 	cout << ary << endl;
 	printf("=================================\n");
-	char ary1[] = { 'a', 'b', 'c', '\0', 'e' };       // \0Àº ¹®ÀÚ¿­ÀÇ ³¡À» ¾Ë¸®´Â ¹®ÀÚ(³Î¹®ÀÚ)
+	char ary1[] = { 'a', 'b', 'c', '\0', 'e' };       // \0ì€ ë¬¸ìžì—´ì˜ ëì„ ì•Œë¦¬ëŠ” ë¬¸ìž(ë„ë¬¸ìž)
 	cout << ary1 << endl;
-	cout << sizeof(ary1) << endl;         // sizeof´Â ÀüÃ¼ ¹®ÀÚ Å©±â ±¸ÇØÁü
-	cout << strlen(ary1) << endl;         // strlenÀº ³Î¹®ÀÚ ¾Õ±îÁöÀÇ Å©±â¸¸ ±¸ÇØÁü
+	cout << sizeof(ary1) << endl;         // sizeofëŠ” ì „ì²´ ë¬¸ìž í¬ê¸° êµ¬í•´ì§
+	cout << strlen(ary1) << endl;         // strlenì€ ë„ë¬¸ìž ì•žê¹Œì§€ì˜ í¬ê¸°ë§Œ êµ¬í•´ì§
 	printf("=================================\n");
-	char str[] = "string";                // ÀÚµ¿À¸·Î ³Î¹®ÀÚ°¡ ºÙ´Â´Ù.  (stack¿µ¿ª¿¡ ¸¸µé¾îÁü)
+	char str[] = "string";                // ìžë™ìœ¼ë¡œ ë„ë¬¸ìžê°€ ë¶™ëŠ”ë‹¤.  (stackì˜ì—­ì— ë§Œë“¤ì–´ì§)
 	cout << str << endl;
-	cout << sizeof(str) << endl;          // 7(³Î¹®ÀÚ°¡ Æ÷ÇÔµÈ Å©±â°¡ ¸®ÅÏµÈ´Ù.)
-	cout << strlen(str) << endl;          // 6(¼ø¼öÇÏ°Ô ¹®ÀÚ¿­ Å©±â¸¸ ¸®ÅÏµÈ´Ù.)
-	str[0] = 'S';                         // ´ë¹®ÀÚ·Î ¹Ù²Þ
+	cout << sizeof(str) << endl;          // 7(ë„ë¬¸ìžê°€ í¬í•¨ëœ í¬ê¸°ê°€ ë¦¬í„´ëœë‹¤.)
+	cout << strlen(str) << endl;          // 6(ìˆœìˆ˜í•˜ê²Œ ë¬¸ìžì—´ í¬ê¸°ë§Œ ë¦¬í„´ëœë‹¤.)
+	str[0] = 'S';                         // ëŒ€ë¬¸ìžë¡œ ë°”ê¿ˆ
 	cout << str << endl;
 	printf("=================================\n");
-	const char* pstr = "STRING";          // º¯°æÀÌ ¾ÈµÇ±â ¶§¹®¿¡ const¶ó´Â Å°¿öµå¸¦ ºÙÀÓ (read-onlyÀÎ µ¥ÀÌÅÍ ¿µ¿ª¿¡ ¸¸µé¾îÁü)
+	const char* pstr = "STRING";          // ë³€ê²½ì´ ì•ˆë˜ê¸° ë•Œë¬¸ì— constë¼ëŠ” í‚¤ì›Œë“œë¥¼ ë¶™ìž„ (read-onlyì¸ ë°ì´í„° ì˜ì—­ì— ë§Œë“¤ì–´ì§)
 	cout << pstr << endl;
-	cout << sizeof(pstr) << endl;         // 8(Æ÷ÀÎÅÍ º¯¼öÀÇ Å©±â)
+	cout << sizeof(pstr) << endl;         // 8(í¬ì¸í„° ë³€ìˆ˜ì˜ í¬ê¸°)
 	cout << strlen(pstr) << endl;
-   // pstr[0] = 's';                       ¹®ÀÚ¿­À» Æ÷ÀÎÅÍ·Î »ç¿ëÇÏ´Â °æ¿ì´Â º¯°æ ºÒ°¡
+   // pstr[0] = 's';                       ë¬¸ìžì—´ì„ í¬ì¸í„°ë¡œ ì‚¬ìš©í•˜ëŠ” ê²½ìš°ëŠ” ë³€ê²½ ë¶ˆê°€
 
 	printf("=================================\n");
 	printf("=================================\n");
 
 	/*
-	C++ - style : heap ¿µ¿ª¿¡ ÀúÀå
+	C++ - style : heap ì˜ì—­ì— ì €ìž¥
 	*/
 	string s = "string";
 	cout << s << endl;
 	cout << sizeof(s) << endl;
-	// cout << strlen(s) << endl;      »ç¿ë ºÒ°¡(const char Æ÷ÀÎÅÍ Å¸ÀÔÀÌ¶ó¼­..)
-	cout << s.size() << endl;          // 45¹øÀ» ´ëÃ¼ÇØ¼­ »ç¿ë °¡´É
+	// cout << strlen(s) << endl;      ì‚¬ìš© ë¶ˆê°€(const char í¬ì¸í„° íƒ€ìž…ì´ë¼ì„œ..)
+	cout << s.size() << endl;          // 45ë²ˆì„ ëŒ€ì²´í•´ì„œ ì‚¬ìš© ê°€ëŠ¥
 
 	string s1 = "Honggildong";
 	cout << s1 << endl;

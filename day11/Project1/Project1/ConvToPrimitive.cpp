@@ -16,9 +16,9 @@ public:
 		num = ref.num;
 		return *this;
 	}
-	operator int()              // Çü º¯È¯ ¿¬»êÀÚÀÇ ¿À¹ö·Îµù 
+	operator int()              // í˜• ë³€í™˜ ì—°ì‚°ìì˜ ì˜¤ë²„ë¡œë”© 
 	{
-		return num;            // Çü º¯È¯ ¿¬»êÀÚ´Â ¹İÈ¯¹®Àº ¾øÁö¸¸ ¸®ÅÏ¹®Àº ÀÖ´Ù.
+		return num;            // í˜• ë³€í™˜ ì—°ì‚°ìëŠ” ë°˜í™˜ë¬¸ì€ ì—†ì§€ë§Œ ë¦¬í„´ë¬¸ì€ ìˆë‹¤.
 	}
 	void ShowNumber() { cout << num << endl; }
 };

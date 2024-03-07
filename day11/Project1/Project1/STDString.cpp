@@ -6,7 +6,7 @@ int main(void)
 {
 	string str1 = "I like ";
 	string str2 = "string class";
-	string str3 = str1 + str2;             // ¹®ÀÚ¸¦ ´õÇÒ ¼ö ÀÖ´Â ±â´É
+	string str3 = str1 + str2;             // ë¬¸ìë¥¼ ë”í•  ìˆ˜ ìˆëŠ” ê¸°ëŠ¥
 
 	cout << str1 << endl;
 	cout << str2 << endl;
@@ -14,14 +14,14 @@ int main(void)
 
 	str1 += str2;
 	if (str1 == str3)
-		cout << "µ¿ÀÏ ¹®ÀÚ¿­!" << endl;
+		cout << "ë™ì¼ ë¬¸ìì—´!" << endl;
 	else
-		cout << "µ¿ÀÏÇÏÁö ¾ÊÀº ¹®ÀÚ¿­!" << endl;
+		cout << "ë™ì¼í•˜ì§€ ì•Šì€ ë¬¸ìì—´!" << endl;
 
 	string str4;
-	cout << "¹®ÀÚ¿­ ÀÔ·Â: ";
+	cout << "ë¬¸ìì—´ ì…ë ¥: ";
 	cin >> str4;
-	cout << "ÀÔ·ÂÇÑ ¹®ÀÚ¿­: " << str4 << endl;
+	cout << "ì…ë ¥í•œ ë¬¸ìì—´: " << str4 << endl;
 
 	return 0;
 }

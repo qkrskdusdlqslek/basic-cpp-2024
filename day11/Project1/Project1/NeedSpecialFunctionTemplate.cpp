@@ -4,13 +4,13 @@ using namespace std;
 template <typename T>
 T Max(T a, T b)
 {
-	return a > b ? a:b;    // ?¾Õ¿¡ ÀÖ´Â ºÎºĞÀÌ ÂüÀÌ¸é a°¡ ¸®ÅÏµÇ°í °ÅÁşÀÌ¸é b°¡ ¸®ÅÏµÈ´Ù.
+	return a > b ? a:b;    // ?ì•ì— ìˆëŠ” ë¶€ë¶„ì´ ì°¸ì´ë©´ aê°€ ë¦¬í„´ë˜ê³  ê±°ì§“ì´ë©´ bê°€ ë¦¬í„´ëœë‹¤.
 }
 
 int main(void)
 {
 	cout << Max(11, 15) << endl;
-	cout << Max('T', 'Q') << endl;     // Âü(¾ËÆÄºª ¼ø¼­¿¡ µû¶ó¼­..)
+	cout << Max('T', 'Q') << endl;     // ì°¸(ì•ŒíŒŒë²³ ìˆœì„œì— ë”°ë¼ì„œ..)
 	cout << Max(3.5, 7.5) << endl;
 	cout << Max("Simple", "Best") << endl;
 

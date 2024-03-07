@@ -1,6 +1,6 @@
 /*
-  5¸íÀÇ ÀÌ¸§°ú ±¹,¿µ,¼ö 3°ú¸ñÀ» ÀÔ·Â¹Ş¾Æ ÇĞ»ıº° Æò±Õ, ±×¸®°í °ú¸ñº° ÃÑÁ¡°ú Æò±ÕÀ» ±¸ÇÏ½Ã¿À.
-  1. °´Ã¼ Æ÷ÀÎÅÍ ¹è¿­ »ç¿ë
+  5ëª…ì˜ ì´ë¦„ê³¼ êµ­,ì˜,ìˆ˜ 3ê³¼ëª©ì„ ì…ë ¥ë°›ì•„ í•™ìƒë³„ í‰ê· , ê·¸ë¦¬ê³  ê³¼ëª©ë³„ ì´ì ê³¼ í‰ê· ì„ êµ¬í•˜ì‹œì˜¤.
+  1. ê°ì²´ í¬ì¸í„° ë°°ì—´ ì‚¬ìš©
 */
 #define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
@@ -8,7 +8,7 @@
 using namespace std;
 
 class Grade {
-	char* name;        // ÀÌ¸§À» Æ÷ÀÎÅÍ ÁÖ¼Ò·Î »ç¿ëÇÏ°Ú´Ù.
+	char* name;        // ì´ë¦„ì„ í¬ì¸í„° ì£¼ì†Œë¡œ ì‚¬ìš©í•˜ê² ë‹¤.
 	int ko;
 	int eng;
 	int math;
@@ -20,8 +20,8 @@ public:
 		this->eng = eng;
 		this->math = math;
 	}
-	~Grade() {                  // ¼Ò¸êÀÚ
-		printf("¼Ò¸êÀÚ È£Ãâ\n");
+	~Grade() {                  // ì†Œë©¸ì
+		printf("ì†Œë©¸ì í˜¸ì¶œ\n");
 		delete[] name;
 	}
 	int getKo() {
@@ -46,7 +46,7 @@ public:
 
 int main()
 {
-	// Grade* gradeAry[3];       // °´Ã¼ Æ÷ÀÎÅÍ ¹è¿­
+	// Grade* gradeAry[3];       // ê°ì²´ í¬ì¸í„° ë°°ì—´
 
 	char name[20];
 	int inKo;
@@ -57,35 +57,35 @@ int main()
 	int sum2 = 0;
 	int num = 0;
 	
-	cout << "¼ºÀûÃ³¸® ÇĞ»ı¼ö: " << endl;
+	cout << "ì„±ì ì²˜ë¦¬ í•™ìƒìˆ˜: " << endl;
 	cin >> num;
 
 	vector<Grade*> gradeAry(num);
 
-	// 1. ÀÔ·Â ¹Ş´Â ÄÚµå ÀÛ¼º
-	for(int i=0; i<num; i++) {       // vector »ç¿ëÇÒ ¶§ i<3 ´ë½Å i<num ¾´´Ù
-	cout << "ÀÌ¸§ ÀÔ·Â: ";
+	// 1. ì…ë ¥ ë°›ëŠ” ì½”ë“œ ì‘ì„±
+	for(int i=0; i<num; i++) {       // vector ì‚¬ìš©í•  ë•Œ i<3 ëŒ€ì‹  i<num ì“´ë‹¤
+	cout << "ì´ë¦„ ì…ë ¥: ";
 	cin >> name;
-	cout << "±¹¾î Á¡¼ö: ";
+	cout << "êµ­ì–´ ì ìˆ˜: ";
 	cin >> inKo;
-	cout << "¿µ¾î Á¡¼ö: ";
+	cout << "ì˜ì–´ ì ìˆ˜: ";
 	cin >> inEng;
-	cout << "¼öÇĞ Á¡¼ö: ";
+	cout << "ìˆ˜í•™ ì ìˆ˜: ";
 	cin >> inMath;
 
 	//cout << name << inKo << inEng << inMath << endl;
 	
-// 2. °´Ã¼ »ı¼º: 5°³ÀÇ °´Ã¼ »ı¼º(ÀÏ´Ü 2°³ »ı¼º), °´Ã¼ ¹è¿­ »ç¿ë or °´Ã¼ Æ÷ÀÎÅÍ ¹è¿­ »ç¿ë
+// 2. ê°ì²´ ìƒì„±: 5ê°œì˜ ê°ì²´ ìƒì„±(ì¼ë‹¨ 2ê°œ ìƒì„±), ê°ì²´ ë°°ì—´ ì‚¬ìš© or ê°ì²´ í¬ì¸í„° ë°°ì—´ ì‚¬ìš©
 	gradeAry[i]= new Grade(name, inKo, inEng, inMath);
 	}
 	
 	for(int i=0; i<num; i++){
-	//cout <<"ÃÑÁ¡: "<< gradeAry[0]->sum() << "   ÆòÁ¡: " << gradeAry[0]->avr() << endl;
-		printf("%d¹øÂ° ÇĞ»ı ÃÑÁ¡: %d, ÆòÁ¡: %.1lf\n",i+1, gradeAry[i]->sum(), gradeAry[i]->avr());
+	//cout <<"ì´ì : "<< gradeAry[0]->sum() << "   í‰ì : " << gradeAry[0]->avr() << endl;
+		printf("%dë²ˆì§¸ í•™ìƒ ì´ì : %d, í‰ì : %.1lf\n",i+1, gradeAry[i]->sum(), gradeAry[i]->avr());
 	}
 	
 	for (int i = 0; i < num; i++) {
-	/*cout << gradeAry[i]->getKo() << endl;     // °ú¸ñ ÃÑÁ¡, ÆòÁ¡
+	/*cout << gradeAry[i]->getKo() << endl;     // ê³¼ëª© ì´ì , í‰ì 
 	cout << gradeAry[i]->getEng() << endl;
 	cout << gradeAry[i]->getMath() << endl; */
 		sum = sum + gradeAry[i]->getKo();
@@ -95,12 +95,12 @@ int main()
 	//cout << sum << endl;
 	//cout << sum1 << endl;
 	//cout << sum2 << endl;
-	printf("±¹¾î ÃÑÁ¡: %d, ±¹¾î ÆòÁ¡: %.1lf", sum, sum / float(size(gradeAry)));   // float(size()) = ³ª´©±â 3.0
-	printf("¿µ¾î ÃÑÁ¡: %d, ¿µ¾î ÆòÁ¡: %.1lf", sum1, sum1 / float(size(gradeAry)));
-	printf("¼öÇĞ ÃÑÁ¡: %d, ¼öÇĞ ÆòÁ¡: %.1lf", sum2, sum2 / float(size(gradeAry)));
+	printf("êµ­ì–´ ì´ì : %d, êµ­ì–´ í‰ì : %.1lf", sum, sum / float(size(gradeAry)));   // float(size()) = ë‚˜ëˆ„ê¸° 3.0
+	printf("ì˜ì–´ ì´ì : %d, ì˜ì–´ í‰ì : %.1lf", sum1, sum1 / float(size(gradeAry)));
+	printf("ìˆ˜í•™ ì´ì : %d, ìˆ˜í•™ í‰ì : %.1lf", sum2, sum2 / float(size(gradeAry)));
 
 	for(int i=0; i<num; i++){
-		printf("°´Ã¼ ÇÒ´ç ¼Ò¸êÀÚ È£Ãâ\n");
+		printf("ê°ì²´ í• ë‹¹ ì†Œë©¸ì í˜¸ì¶œ\n");
 	delete gradeAry[i];
 	}
 
