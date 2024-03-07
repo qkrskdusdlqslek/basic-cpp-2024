@@ -15,43 +15,31 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="InheritAssignOperation.cpp">
+    <ClCompile Include="ConvToObject.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="ImproveInit.cpp">
+    <ClCompile Include="ConvToPrimitive.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="array01.cpp">
+    <ClCompile Include="STDString.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="ArrayClass.cpp">
+    <ClCompile Include="String01.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="NewDeleteOverloading.cpp">
+    <ClCompile Include="StringClass.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="PointerOperatorOverloading.cpp">
+    <ClCompile Include="AddFunctionTemplate.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="SmartPointer.cpp">
+    <ClCompile Include="TwoTypeAddFunction.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="smarP.cpp">
+    <ClCompile Include="PrimitiveFunctionTemplate.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="Functor.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Practice01.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Practice01-1.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Practice01Answer%28객체 포인터 배열%29.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Practice01Answer%28객체 배열%29.cpp">
+    <ClCompile Include="NeedSpecialFunctionTemplate.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
