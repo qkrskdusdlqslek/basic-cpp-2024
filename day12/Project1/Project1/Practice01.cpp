@@ -55,6 +55,13 @@ public:
 int main()
 {
 	Product *productary[100];
+	
+	char id;
+	int price;
+	int producer;
+
+	for (int i = 0; i < 100; i++) {
+		cout<< ""
 
 	return 0;
 }
