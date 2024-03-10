@@ -3,7 +3,7 @@
 using namespace std;
 
 class Product {
-protected:
+private:
     string id;
     double price;
     string producer;
@@ -25,10 +25,10 @@ public:
     Book(string id, double price, string producer, string ISBN, string author, string title)
         : Product(id, price, producer), ISBN(ISBN), author(author), title(title) {}
 
-    void printDetails() override {
+    void printDetails() {
         cout << "Book Details:" << endl;
         cout << "ID: " << id << endl;
-        cout << "Price: $" << price << endl;
+        cout << "Price: " << price << endl;
         cout << "Producer: " << producer << endl;
         cout << "ISBN: " << ISBN << endl;
         cout << "Author: " << author << endl;
@@ -45,10 +45,10 @@ public:
     Handphone(string id, double price, string producer, string model, int RAM)
         : Product(id, price, producer), model(model), RAM(RAM) {}
 
-    void printDetails() override {
+    void printDetails() {
         cout << "Handphone Details:" << endl;
         cout << "ID: " << id << endl;
-        cout << "Price: $" << price << endl;
+        cout << "Price: " << price << endl;
         cout << "Producer: " << producer << endl;
         cout << "Model: " << model << endl;
         cout << "RAM: " << RAM << "GB" << endl;
@@ -65,10 +65,10 @@ public:
     Computer(string id, double price, string producer, string model, string cpu, int RAM)
         : Product(id, price, producer), model(model), cpu(cpu), RAM(RAM) {}
 
-    void printDetails() override {
+    void printDetails() {
         cout << "Computer Details:" << endl;
         cout << "ID: " << id << endl;
-        cout << "Price: $" << price << endl;
+        cout << "Price: " << price << endl;
         cout << "Producer: " << producer << endl;
         cout << "Model: " << model << endl;
         cout << "CPU: " << cpu << endl;
@@ -109,7 +109,7 @@ int main() {
                 cin >> author;
                 cout << "Enter Title: ";
                 cin >> title;
-                products[productCount++] = new Book(id, price, producer, ISBN, author, title);
+                products[productCount] = new Book(id, price, producer, ISBN, author, title);
             } else if (subChoice == 2) {
                 string id, model, producer;
                 int RAM;
@@ -124,7 +124,7 @@ int main() {
                 cin >> model;
                 cout << "Enter RAM (in GB): ";
                 cin >> RAM;
-                products[productCount++] = new Handphone(id, price, producer, model, RAM);
+                products[productCount] = new Handphone(id, price, producer, model, RAM);
             } else if (subChoice == 3) {
                 string id, model, cpu, producer;
                 int RAM;
@@ -141,7 +141,7 @@ int main() {
                 cin >> cpu;
                 cout << "Enter RAM (in GB): ";
                 cin >> RAM;
-                products[productCount++] = new Computer(id, price, producer, model, cpu, RAM);
+                products[productCount] = new Computer(id, price, producer, model, cpu, RAM);
             }
 
         } else {
@@ -150,13 +150,13 @@ int main() {
     }
 
     cout << "등록된 상품 목록:" << endl;
-    for (int i = 0; i < productCount; ++i) {
+    for (int i = 0; i < productCount; i++) {
         products[i]->printDetails();
         cout << endl;
     }
 
     // 메모리 해제
-    for (int i = 0; i < productCount; ++i) {
+    for (int i = 0; i < productCount; i++) {
         delete products[i];
     }
 
