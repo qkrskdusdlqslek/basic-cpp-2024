@@ -1,5 +1,5 @@
 /*
-  vector °´Ã¼¸¦ »ı¼ºÇÏ°í Á¤¼ö¸¦ ÀÔ·Â ¹ŞÀ» ¶§¸¶´Ù vector¿¡ »ğÀÔÇÏ°í Æò±ÕÀ» Ãâ·ÂÇÏ½Ã¿À.
+  vector ê°ì²´ë¥¼ ìƒì„±í•˜ê³  ì •ìˆ˜ë¥¼ ì…ë ¥ ë°›ì„ ë•Œë§ˆë‹¤ vectorì— ì‚½ì…í•˜ê³  í‰ê· ì„ ì¶œë ¥í•˜ì‹œì˜¤.
 */
 #include <iostream>
 #include <vector>
@@ -12,7 +12,7 @@ int main()
 	int sum=0;
 
 	while (true) {
-		cout << "Á¤¼ö ÇÑ°³ ÀÔ·Â(0 Á¾·á): " << endl;
+		cout << "ì •ìˆ˜ í•œê°œ ì…ë ¥(0 ì¢…ë£Œ): " << endl;
 		cin >> inKey;
 		if (!inKey) {
 			break;
@@ -25,7 +25,7 @@ int main()
 		cout << sum / v.size() << endl;
 	}
 	
-	cout << "ÇÁ·Î±×·¥À» Á¾·áÇÕ´Ï´Ù." << endl;
+	cout << "í”„ë¡œê·¸ë¨ì„ ì¢…ë£Œí•©ë‹ˆë‹¤." << endl;
 
 	
 

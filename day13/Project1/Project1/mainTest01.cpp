@@ -1,11 +1,11 @@
-// »çÄ¢¿¬»ê ¸¸µé±â
+// ì‚¬ì¹™ì—°ì‚° ë§Œë“¤ê¸°
 #include <iostream>
 using namespace std;
 
 int main(int argc, char* argv[])
 {
 	int n1, n2;
-	cout << "2°³ÀÇ Á¤¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä" << endl;
+	cout << "2ê°œì˜ ì •ìˆ˜ë¥¼ ìž…ë ¥í•˜ì„¸ìš”" << endl;
 	cin >> n1 >> n2;
 
 	cout << "+: " << n1 + n2 << endl;
@@ -13,10 +13,10 @@ int main(int argc, char* argv[])
 	cout << "X: " << n1 * n2 << endl;
 	try {
 		if (!n2) throw n2;
-		cout << "/: " << n1 / n2 << endl;         // ³ª´©±â´Â 0ÀÌ ¾ÈµÊ. ±×·¡¼­ ¿¹¿ÜÃ³¸®
+		cout << "/: " << n1 / n2 << endl;         // ë‚˜ëˆ„ê¸°ëŠ” 0ì´ ì•ˆë¨. ê·¸ëž˜ì„œ ì˜ˆì™¸ì²˜ë¦¬
 	}
 	catch (int exception) {
-		cout << "0À¸·Î ³ª´­ ¼ö ¾ø½À´Ï´Ù." << endl;
+		cout << "0ìœ¼ë¡œ ë‚˜ëˆŒ ìˆ˜ ì—†ìŠµë‹ˆë‹¤." << endl;
 	}
 
 	return 0;

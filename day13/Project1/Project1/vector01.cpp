@@ -4,13 +4,13 @@ using namespace std;
 
 int main()
 {
-	vector <int> v;         // intÅ¸ÀÔÀÇ vector »ı¼º
+	vector <int> v;         // intíƒ€ì…ì˜ vector ìƒì„±
 	
 	for (int i = 0; i < 10; i++) {
 		v.push_back(i + 1);
 		printf("v[%d]: %d\n ", i, v[i]);
-		printf("v.size(): %ll\n", v.size());                // ¿ø¼Ò °³¼ö
-		printf("v.capacity(): %d\n", v.capacity());         // ¸Ş¸ğ¸® °ø°£
+		printf("v.size(): %ll\n", v.size());                // ì›ì†Œ ê°œìˆ˜
+		printf("v.capacity(): %d\n", v.capacity());         // ë©”ëª¨ë¦¬ ê³µê°„
 	}
 	
 	v.push_back(20);
@@ -25,7 +25,7 @@ int main()
 		printf("v.at(i): %d\n", v.at(i));
 	}
 
-	cout << "iterator: ¹İº¹ÀÚ" << endl;
+	cout << "iterator: ë°˜ë³µì" << endl;
 	vector<int>::iterator iter;
 	for (iter = v.begin(); iter != v.end(); iter++) {
 		cout << "*iter: " << *iter << endl;
@@ -44,10 +44,10 @@ int main()
 		cout << *it << endl;
 	}
 
-	// ÃÊ±âÈ­
-	vector<int> v1;              // Å©±â°¡ 0ÀÎ vector »ı¼º
-	vector<int> v2(5);          // Å©±â°¡ 5ÀÎ vector »ı¼º(0À¸·Î ÃÊ±âÈ­)
+	// ì´ˆê¸°í™”
+	vector<int> v1;              // í¬ê¸°ê°€ 0ì¸ vector ìƒì„±
+	vector<int> v2(5);          // í¬ê¸°ê°€ 5ì¸ vector ìƒì„±(0ìœ¼ë¡œ ì´ˆê¸°í™”)
 	vector<int> v3 = { 10, 20, 30 };
-	vector<int> v4(10, 7);     // Å©±â°¡ 10ÀÌ°í, 7·Î ÃÊ±âÈ­
+	vector<int> v4(10, 7);     // í¬ê¸°ê°€ 10ì´ê³ , 7ë¡œ ì´ˆê¸°í™”
 	return 0;
 }
