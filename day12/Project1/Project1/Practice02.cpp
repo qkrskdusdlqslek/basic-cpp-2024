@@ -51,7 +51,7 @@ public:
         cout << "Price: " << endl;
         cout << "Producer: " << endl;
         cout << "Model: " << model << endl;
-        cout << "RAM: " << RAM << "GB" << endl;
+        cout << "RAM: " << RAM << endl;
     }
 };
 
