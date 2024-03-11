@@ -27,9 +27,9 @@ public:
 
     void printDetails() {
         cout << "Book Details:" << endl;
-        cout << "ID: " << id << endl;
-        cout << "Price: " << price << endl;
-        cout << "Producer: " << producer << endl;
+        cout << "ID: " << endl;
+        cout << "Price: " << endl;
+        cout << "Producer: " << endl;
         cout << "ISBN: " << ISBN << endl;
         cout << "Author: " << author << endl;
         cout << "Title: " << title << endl;
@@ -47,9 +47,9 @@ public:
 
     void printDetails() {
         cout << "Handphone Details:" << endl;
-        cout << "ID: " << id << endl;
-        cout << "Price: " << price << endl;
-        cout << "Producer: " << producer << endl;
+        cout << "ID: " << endl;
+        cout << "Price: " << endl;
+        cout << "Producer: " << endl;
         cout << "Model: " << model << endl;
         cout << "RAM: " << RAM << "GB" << endl;
     }
@@ -67,9 +67,9 @@ public:
 
     void printDetails() {
         cout << "Computer Details:" << endl;
-        cout << "ID: " << id << endl;
-        cout << "Price: " << price << endl;
-        cout << "Producer: " << producer << endl;
+        cout << "ID: " << endl;
+        cout << "Price: " << endl;
+        cout << "Producer: " << endl;
         cout << "Model: " << model << endl;
         cout << "CPU: " << cpu << endl;
         cout << "RAM: " << RAM << "GB" << endl;
