@@ -5,14 +5,14 @@
   class Book : ISBN, author, title              // 978-89-001-0001-1
   class Handphone: model, RAM
   class Computer: model, cpu, RAM
- - °´Ã¼ Æ÷ÀÎÅÍ ¹è¿­·Î ¿Ï¼º: product[100]
- - string Å¬·¡½º »ç¿ë °¡´É
- - ÆÄÀÏºÐÇÒ(¾ÈÇØµµ µÊ)
+ - ê°ì²´ í¬ì¸í„° ë°°ì—´ë¡œ ì™„ì„±: product[100]
+ - string í´ëž˜ìŠ¤ ì‚¬ìš© ê°€ëŠ¥
+ - íŒŒì¼ë¶„í• (ì•ˆí•´ë„ ë¨)
 
-  ¸ÞÀÎÈ­¸é
-  --------»óÇ°°ü¸® ÇÁ·Î±×·¥--------
-  1. »óÇ°Ãß°¡ 2. »óÇ°Ãâ·Â 3. »óÇ°°Ë»ö 0. Á¾·á
-  > 1 ¶Ç´Â 2 ¶Ç´Â 3À» ¼±ÅÃÇÑ °æ¿ì 1 Ã¥ 2 ÇÚµåÆù 3 ÄÄÇ»ÅÍ ¼±ÅÃ ¸ñ·ÏÀ» ¶ç¿ö ÇØ´ç »óÇ°À» ¼±ÅÃÇÑ ÈÄ¿¡ Ãß°¡, Ãâ·Â, ¶Ç´Â °Ë»ö ½ÇÇàµÈ´Ù
+  ë©”ì¸í™”ë©´
+  --------ìƒí’ˆê´€ë¦¬ í”„ë¡œê·¸ëž¨--------
+  1. ìƒí’ˆì¶”ê°€ 2. ìƒí’ˆì¶œë ¥ 3. ìƒí’ˆê²€ìƒ‰ 0. ì¢…ë£Œ
+  > 1 ë˜ëŠ” 2 ë˜ëŠ” 3ì„ ì„ íƒí•œ ê²½ìš° 1 ì±… 2 í•¸ë“œí° 3 ì»´í“¨í„° ì„ íƒ ëª©ë¡ì„ ë„ì›Œ í•´ë‹¹ ìƒí’ˆì„ ì„ íƒí•œ í›„ì— ì¶”ê°€, ì¶œë ¥, ë˜ëŠ” ê²€ìƒ‰ ì‹¤í–‰ëœë‹¤
 */
 
 #include <iostream>
@@ -32,8 +32,8 @@ public:
 		this->price = price;
 		this->producer = producer;
 	}
-	~Product() {                  // ¼Ò¸êÀÚ
-		printf("¼Ò¸êÀÚ È£Ãâ\n");
+	~Product() {                  // ì†Œë©¸ìž
+		printf("ì†Œë©¸ìž í˜¸ì¶œ\n");
 		delete[]id;
 		
 };
