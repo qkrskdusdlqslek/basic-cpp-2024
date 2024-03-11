@@ -221,3 +221,6 @@ IoT 개발자 심화 프로그래밍 언어 학습리포지토리
 	   - push_back / pop_back를 사용해서 vector의 맨 끝의 삽입과 삭제가 가능하다.
 	   - using namespace std; 필요하고 vector라는 헤더가 필요하다.
 	   
+	   
+- 라즈베리파이
+	   
