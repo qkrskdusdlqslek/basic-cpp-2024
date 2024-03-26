@@ -3,7 +3,7 @@
 using namespace std;
 
 class Product {
-private:
+protected:
     string id;
     double price;
     string producer;
@@ -47,9 +47,9 @@ public:
 
     void printDetails() {
         cout << "Handphone Details:" << endl;
-        cout << "ID: " << endl;
-        cout << "Price: " << endl;
-        cout << "Producer: " << endl;
+        cout << "ID: " << id << endl;
+        cout << "Price: " << price << endl;
+        cout << "Producer: " << producer <<endl;
         cout << "Model: " << model << endl;
         cout << "RAM: " << RAM << endl;
     }
@@ -67,17 +67,17 @@ public:
 
     void printDetails() {
         cout << "Computer Details:" << endl;
-        cout << "ID: " << endl;
-        cout << "Price: " << endl;
-        cout << "Producer: " << endl;
+        cout << "ID: " << id << endl;
+        cout << "Price: " << price << endl;
+        cout << "Producer: " << producer << endl;
         cout << "Model: " << model << endl;
         cout << "CPU: " << cpu << endl;
         cout << "RAM: " << RAM << "GB" << endl;
     }
 };
 
-int main() {
-    Product *products[100];
+void main() {
+    Product* products[100];
     int productCount = 0;
 
     while (true) {
@@ -94,71 +94,73 @@ int main() {
             cout << "1. 책 2. 핸드폰 3. 컴퓨터" << endl;
             cin >> subChoice;
 
-            if (subChoice == 1) {
-                string id, ISBN, author, title, producer;
-                double price;
-                cout << "Enter ID: ";
-                cin >> id;
-                cout << "Enter Price: ";
-                cin >> price;
-                cout << "Enter Producer: ";
-                cin >> producer;
-                cout << "Enter ISBN: ";
-                cin >> ISBN;
-                cout << "Enter Author: ";
-                cin >> author;
-                cout << "Enter Title: ";
-                cin >> title;
-                products[productCount] = new Book(id, price, producer, ISBN, author, title);
-            } else if (subChoice == 2) {
-                string id, model, producer;
-                int RAM;
-                double price;
-                cout << "Enter ID: ";
-                cin >> id;
-                cout << "Enter Price: ";
-                cin >> price;
-                cout << "Enter Producer: ";
-                cin >> producer;
-                cout << "Enter Model: ";
-                cin >> model;
-                cout << "Enter RAM (in GB): ";
-                cin >> RAM;
-                products[productCount] = new Handphone(id, price, producer, model, RAM);
-            } else if (subChoice == 3) {
-                string id, model, cpu, producer;
-                int RAM;
-                double price;
-                cout << "Enter ID: ";
-                cin >> id;
-                cout << "Enter Price: ";
-                cin >> price;
-                cout << "Enter Producer: ";
-                cin >> producer;
-                cout << "Enter Model: ";
-                cin >> model;
-                cout << "Enter CPU: ";
-                cin >> cpu;
-                cout << "Enter RAM (in GB): ";
-                cin >> RAM;
-                products[productCount] = new Computer(id, price, producer, model, cpu, RAM);
-            }
+        if (subChoice == 1) {
+            string id, ISBN, author, title, producer;
+            double price;
+            cout << "Enter ID: ";
+            cin >> id;
+            cout << "Enter Price: ";
+            cin >> price;
+            cout << "Enter Producer: ";
+            cin >> producer;
+            cout << "Enter ISBN: ";
+            cin >> ISBN;
+            cout << "Enter Author: ";
+            cin >> author;
+            cout << "Enter Title: ";
+            cin >> title;
+            products[productCount] = new Book(id, price, producer, ISBN, author, title);
+        }
 
-        } else {
+        else if (subChoice == 2) {
+            string id, model, producer;
+            int RAM;
+            double price;
+            cout << "Enter ID: ";
+            cin >> id;
+            cout << "Enter Price: ";
+            cin >> price;
+            cout << "Enter Producer: ";
+            cin >> producer;
+            cout << "Enter Model: ";
+            cin >> model;
+            cout << "Enter RAM (in GB): ";
+            cin >> RAM;
+            products[productCount] = new Handphone(id, price, producer, model, RAM);
+        }
+        else if (subChoice == 3) {
+            string id, model, cpu, producer;
+            int RAM;
+            double price;
+            cout << "Enter ID: ";
+            cin >> id;
+            cout << "Enter Price: ";
+            cin >> price;
+            cout << "Enter Producer: ";
+            cin >> producer;
+            cout << "Enter Model: ";
+            cin >> model;
+            cout << "Enter CPU: ";
+            cin >> cpu;
+            cout << "Enter RAM (in GB): ";
+            cin >> RAM;
+            products[productCount] = new Computer(id, price, producer, model, cpu, RAM);
+        }
+        productCount++;
+    }
+        else if (choice == 2) {
+            cout << "등록된 상품 목록: " << endl;
+            for (int i = 0; i < productCount; i++) {
+                products[i]->printDetails();
+                cout << endl;
+            }
+        }
+        else {
             cout << "잘못된 선택입니다. 다시 선택하세요." << endl;
         }
     }
-
-    cout << "등록된 상품 목록:" << endl;
-    for (int i = 0; i < productCount; i++) {
-        products[i]->printDetails();
-        cout << endl;
-    }
-
     // 메모리 해제
     for (int i = 0; i < productCount; i++) {
         delete products[i];
     }
-
-    return 0;
 }
