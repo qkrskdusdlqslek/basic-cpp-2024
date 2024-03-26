@@ -76,13 +76,13 @@ public:
     }
 };
 
-void main() { // main ÇÔ¼ö¸¦ void·Î º¯°æ
+void main() { // main í•¨ìˆ˜ë¥¼ voidë¡œ ë³€ê²½
     Product* products[100];
     int productCount = 0;
 
     while (true) {
-        cout << "»óÇ°°ü¸® ÇÁ·Î±×·¥" << endl;
-        cout << "1. »óÇ°Ãß°¡ 2. »óÇ°Ãâ·Â 3. »óÇ°°Ë»ö 0. Á¾·á" << endl;
+        cout << "ìƒí’ˆê´€ë¦¬ í”„ë¡œê·¸ëž¨" << endl;
+        cout << "1. ìƒí’ˆì¶”ê°€ 2. ìƒí’ˆì¶œë ¥ 3. ìƒí’ˆê²€ìƒ‰ 0. ì¢…ë£Œ" << endl;
 
         int choice;
         cin >> choice;
@@ -91,7 +91,7 @@ void main() { // main ÇÔ¼ö¸¦ void·Î º¯°æ
             break;
         else if (choice == 1) {
             int subChoice;
-            cout << "1. Ã¥ 2. ÇÚµåÆù 3. ÄÄÇ»ÅÍ" << endl;
+            cout << "1. ì±… 2. í•¸ë“œí° 3. ì»´í“¨í„°" << endl;
             cin >> subChoice;
 
             if (subChoice == 1) {
@@ -148,18 +148,18 @@ void main() { // main ÇÔ¼ö¸¦ void·Î º¯°æ
             productCount++;
         }
         else if (choice == 2) {
-            cout << "µî·ÏµÈ »óÇ° ¸ñ·Ï:" << endl;
+            cout << "ë“±ë¡ëœ ìƒí’ˆ ëª©ë¡:" << endl;
             for (int i = 0; i < productCount; i++) {
                 products[i]->printDetails();
                 cout << endl;
             }
         }
         else {
-            cout << "Àß¸øµÈ ¼±ÅÃÀÔ´Ï´Ù. ´Ù½Ã ¼±ÅÃÇÏ¼¼¿ä." << endl;
+            cout << "ìž˜ëª»ëœ ì„ íƒìž…ë‹ˆë‹¤. ë‹¤ì‹œ ì„ íƒí•˜ì„¸ìš”." << endl;
         }
     }
 
-    // ¸Þ¸ð¸® ÇØÁ¦
+    // ë©”ëª¨ë¦¬ í•´ì œ
     for (int i = 0; i < productCount; i++) {
         delete products[i];
     }
